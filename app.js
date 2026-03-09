@@ -4,7 +4,8 @@ const state = {
   filters: {
     search: '',
     folder: '',
-    month: '',
+    subfolder: '',
+    source: '',
   },
 };
 
@@ -18,7 +19,8 @@ const el = {
   logoutBtn: document.getElementById('logoutBtn'),
   searchInput: document.getElementById('searchInput'),
   folderFilter: document.getElementById('folderFilter'),
-  monthFilter: document.getElementById('monthFilter'),
+  subfolderFilter: document.getElementById('subfolderFilter'),
+  sourceFilter: document.getElementById('sourceFilter'),
   content: document.getElementById('content'),
   stats: document.getElementById('stats'),
 };
@@ -75,9 +77,22 @@ function fillSelect(select, values, label) {
 
 function buildFilters(catalog) {
   fillSelect(el.folderFilter, uniqueSorted(catalog.items.map((item) => item.folder)), 'All folders');
-  fillSelect(el.monthFilter, uniqueSorted(catalog.items.map((item) => item.month)), 'All months');
+  fillSelect(el.sourceFilter, uniqueSorted(catalog.items.map((item) => item.source)), 'All sources');
+  refreshSubfolderOptions();
 }
 
+function refreshSubfolderOptions() {
+  const folder = state.filters.folder;
+  const items = state.catalog?.items || [];
+  const subfolders = uniqueSorted(items
+    .filter((item) => !folder || item.folder === folder)
+    .map((item) => item.subfolder));
+  fillSelect(el.subfolderFilter, subfolders, 'All subfolders');
+  if (state.filters.subfolder && !subfolders.includes(state.filters.subfolder)) {
+    state.filters.subfolder = '';
+    el.subfolderFilter.value = '';
+  }
+}
 
 function normalizeString(value) {
   return (value || '').toString().trim().toLowerCase();
@@ -98,7 +113,8 @@ function matchesFilters(item) {
 
   if (q && !haystack.includes(q)) return false;
   if (state.filters.folder && item.folder !== state.filters.folder) return false;
-  if (state.filters.month && item.month !== state.filters.month) return false;
+  if (state.filters.subfolder && item.subfolder !== state.filters.subfolder) return false;
+  if (state.filters.source && item.source !== state.filters.source) return false;
   return true;
 }
 
@@ -240,11 +256,17 @@ function bindEvents() {
 
   el.folderFilter.addEventListener('change', (event) => {
     state.filters.folder = event.target.value;
+    refreshSubfolderOptions();
     render();
   });
 
-  el.monthFilter.addEventListener('change', (event) => {
-    state.filters.month = event.target.value;
+  el.subfolderFilter.addEventListener('change', (event) => {
+    state.filters.subfolder = event.target.value;
+    render();
+  });
+
+  el.sourceFilter.addEventListener('change', (event) => {
+    state.filters.source = event.target.value;
     render();
   });
 }
