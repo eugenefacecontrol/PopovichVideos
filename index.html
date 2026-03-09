@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Library</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <h1>Video Library</h1>
+        <p class="muted">Static GitHub Pages site with simple hardcoded login</p>
+      </div>
+      <div id="sessionBar" class="session-bar hidden">
+        <span id="currentUserLabel"></span>
+        <button id="logoutBtn" class="secondary-btn">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="loginSection" class="card login-card">
+        <h2>Login</h2>
+        <form id="loginForm" class="form-grid">
+          <label>
+            <span>Username</span>
+            <input id="username" name="username" required autocomplete="username" />
+          </label>
+          <label>
+            <span>Password</span>
+            <input id="password" name="password" type="password" required autocomplete="current-password" />
+          </label>
+          <button type="submit">Sign in</button>
+          <p id="loginError" class="error hidden"></p>
+        </form>
+      </section>
+
+      <section id="appSection" class="hidden">
+        <div class="card filters-card">
+          <div class="filters-grid">
+            <label>
+              <span>Search</span>
+              <input id="searchInput" placeholder="Title, folder, tag..." />
+            </label>
+            <label>
+              <span>Folder</span>
+              <select id="folderFilter">
+                <option value="">All folders</option>
+              </select>
+            </label>
+            <label>
+              <span>Subfolder</span>
+              <select id="subfolderFilter">
+                <option value="">All subfolders</option>
+              </select>
+            </label>
+            <label>
+              <span>Source</span>
+              <select id="sourceFilter">
+                <option value="">All sources</option>
+              </select>
+            </label>
+          </div>
+          <p id="stats" class="muted"></p>
+        </div>
+
+        <div id="content" class="content-stack"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./users.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
