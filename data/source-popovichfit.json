@@ -3,6 +3,346 @@
     {
       "week": "1 неделя",
       "weekday": "Пн",
+      "date": "2",
+      "month": "Февраля",
+      "dayOrder": 1,
+      "title": "Дыхание, плоский живот и отсутствие отеков",
+      "type": "Коррекция",
+      "time": 36,
+      "iframeSrc": "https://kinescope.io/5Z4dQwNwHDUNRudDSSriRQ",
+      "media_type": "video",
+      "tags": [
+        "Дыхание"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "3",
+      "month": "Февраля",
+      "dayOrder": 2,
+      "title": "Валики под мышками, отеки",
+      "type": "Коррекция",
+      "time": 33,
+      "iframeSrc": "https://kinescope.io/hVQrnM7GpvhN6j94DcGVwX",
+      "media_type": "video",
+      "tags": [
+        "Отеки"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "4",
+      "month": "Февраля",
+      "dayOrder": 3,
+      "title": "Мышцы тазового дна",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Чт",
+      "date": "5",
+      "month": "Февраля",
+      "dayOrder": 4,
+      "title": "Проблемные зоны бедер, мобильность таза",
+      "type": "Коррекция",
+      "time": 27,
+      "iframeSrc": "https://kinescope.io/8e6SnAS3NGgSJsEiCGogQm",
+      "media_type": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "6",
+      "month": "Февраля",
+      "dayOrder": 5,
+      "title": "Осанка",
+      "type": "Коррекция",
+      "time": 37,
+      "iframeSrc": "https://kinescope.io/5kvj7ZnDmNb7mecBTB2U5e",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Пн",
+      "date": "9",
+      "month": "Февраля",
+      "dayOrder": 1,
+      "title": "Грудобрюшная и тазовая диафрагма",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/rDGTrVETkFz9nmjv9TEwf6",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Вт",
+      "date": "10",
+      "month": "Февраля",
+      "dayOrder": 2,
+      "title": "Проблемные зоны бедер",
+      "type": "Коррекция",
+      "time": 30,
+      "iframeSrc": "https://kinescope.io/ncqFWhZXWzz8CGtsj15MNi",
+      "media_type": "video",
+      "tags": [
+        "Бедра"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Ср",
+      "date": "11",
+      "month": "Февраля",
+      "dayOrder": 3,
+      "title": "Осанка, холка",
+      "type": "Коррекция",
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/9GpVWfUWiXjWThod4U6Xr5",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Чт",
+      "date": "12",
+      "month": "Февраля",
+      "dayOrder": 4,
+      "title": "Пресс, работа глубокого блока",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/uqkcXpueDfZapJXCytBHDy",
+      "media_type": "video",
+      "tags": [
+        "Пресс"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Пт",
+      "date": "13",
+      "month": "Февраля",
+      "dayOrder": 5,
+      "title": "Активация ягодиц",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/i8J1WFfPYcQqFj4WSUMpTs",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Пн",
+      "date": "16",
+      "month": "Февраля",
+      "dayOrder": 1,
+      "title": "Дыхание и мышцы тазового дна",
+      "type": "Коррекция",
+      "time": 37,
+      "iframeSrc": "https://kinescope.io/eqJjBAjAzafm9kTmiFFiBg",
+      "media_type": "video",
+      "tags": [
+        "Дыхание"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Вт",
+      "date": "17",
+      "month": "Февраля",
+      "dayOrder": 2,
+      "title": "Комплексная работа с осанкой и Кором",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/26dLhnCLZtEWJcU7EiGHrL",
+      "media_type": "video",
+      "tags": [
+        "КОР"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Ср",
+      "date": "18",
+      "month": "Февраля",
+      "dayOrder": 3,
+      "title": "Активный лимфодренаж всего тела, проблемные зоны",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/uKVywbGqUxe2sG6KZiR1Mn",
+      "media_type": "video",
+      "tags": [
+        "Спина"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Чт",
+      "date": "19",
+      "month": "Февраля",
+      "dayOrder": 4,
+      "title": "Мышцы брюшного пресса",
+      "type": "Коррекция",
+      "time": 28,
+      "iframeSrc": "https://kinescope.io/ecYFYXM54ybitDfU8YP4rR",
+      "media_type": "video",
+      "tags": [
+        "Пресс"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Пт",
+      "date": "20",
+      "month": "Февраля",
+      "dayOrder": 5,
+      "title": "Красивая спина, шея",
+      "type": "Коррекция",
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/s8UxxF1KD4Pa7V9nfMm4Av",
+      "media_type": "video",
+      "tags": [
+        "Спина"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Пн",
+      "date": "23",
+      "month": "Февраля",
+      "dayOrder": 1,
+      "title": "Перекосы таза: передний и задний треугольник мышц тазового дна",
+      "type": "Коррекция",
+      "time": 38,
+      "iframeSrc": "https://kinescope.io/7KKLSUeuYawowCvNQ1BR9Z",
+      "media_type": "video",
+      "tags": [
+        "МТД"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Вт",
+      "date": "24",
+      "month": "Февраля",
+      "dayOrder": 2,
+      "title": "Позвоночник, осанка",
+      "type": "Коррекция",
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/idUXeqVpYK2NsvGBBChrZo",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Ср",
+      "date": "25",
+      "month": "Февраля",
+      "dayOrder": 3,
+      "title": "Крепкий и функциональный Кор",
+      "type": "Коррекция",
+      "time": 30,
+      "iframeSrc": "https://kinescope.io/5XF3ng8ufDAaRufuWD6uTb",
+      "media_type": "video",
+      "tags": [
+        "КОР"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Чт",
+      "date": "26",
+      "month": "Февраля",
+      "dayOrder": 4,
+      "title": "Лимфодренаж",
+      "type": "Коррекция",
+      "time": 38,
+      "iframeSrc": "https://kinescope.io/dsg2EUTuRvgrL5w3tiupPy",
+      "media_type": "video",
+      "tags": [
+        "Лимфодренаж"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Пт",
+      "date": "27",
+      "month": "Февраля",
+      "dayOrder": 5,
+      "title": "Здоровье позвоночника",
+      "type": "Коррекция",
+      "time": 24,
+      "iframeSrc": "https://kinescope.io/w4zrn4kWVGKD3r8fXy19sT",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пн",
       "date": "9",
       "month": "Марта",
       "dayOrder": 1,
