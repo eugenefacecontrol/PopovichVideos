@@ -63,6 +63,18 @@ def parse_json_file(path: Path) -> list[dict]:
     return items
 
 
+def month_to_number(month: str | None) -> int:
+    """Convert Russian month name to number for sorting"""
+    if not month:
+        return 999
+    month_map = {
+        'января': 1, 'февраля': 2, 'марта': 3, 'апреля': 4,
+        'мая': 5, 'июня': 6, 'июля': 7, 'августа': 8,
+        'сентября': 9, 'октября': 10, 'ноября': 11, 'декабря': 12
+    }
+    return month_map.get(month.lower(), 999)
+
+
 def main() -> None:
     all_items: list[dict] = []
     for path in sorted(DATA_DIR.glob('source-*.json')):
@@ -72,6 +84,8 @@ def main() -> None:
         x['folder'] or '',
         x['subfolder'] or '',
         x['week'] or '',
+        month_to_number(x['month']),
+        int(x['date']) if x['date'] and str(x['date']).isdigit() else 999,
         x['dayOrder'] if x['dayOrder'] is not None else 999,
         x['title'] or '',
     ))
