@@ -2,7 +2,7 @@
   "generatedFrom": [
     "source-popovichfit.json"
   ],
-  "totalVideos": 169,
+  "totalVideos": 177,
   "folders": [
     {
       "name": "Бонусные тренировки",
@@ -3884,6 +3884,81 @@
           "complexity": null
         },
         {
+          "id": "source-popovichfit-trainings-тренировки-мобильность-таза-httpskinescopeioqad6wtbbzs5orsvguajtxc",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Пн",
+          "date": "9",
+          "month": "Марта",
+          "dateLabel": "Пн 9 Марта",
+          "dayOrder": 1,
+          "title": "Мобильность таза",
+          "type": "Коррекция",
+          "time": 23,
+          "iframeSrc": "https://kinescope.io/qad6wtbbzS5oRsvGUAJtXC",
+          "mediaType": "video",
+          "tags": [
+            "Таз"
+          ],
+          "inventory": "массажный мяч",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
+          "id": "source-popovichfit-trainings-тренировки-ягодичная-базовая-httpskinescopeiofrodj1dqpldcksvfsjidug",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Пн",
+          "date": "9",
+          "month": "Марта",
+          "dateLabel": "Пн 9 Марта",
+          "dayOrder": 1,
+          "title": "Ягодичная базовая",
+          "type": "Силовая",
+          "time": 41,
+          "iframeSrc": "https://kinescope.io/froDj1dQPLdcKSVfSJiDUG",
+          "mediaType": "video",
+          "tags": [
+            "Ягодицы"
+          ],
+          "inventory": "отягощение в зависимости от уровня подготовленности, скамья (диван)",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
+          "id": "source-popovichfit-trainings-тренировки-мышцы-тазового-дна-httpskinescopeiodbx3b4eh4akn86jfhvexfm",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Вт",
+          "date": "10",
+          "month": "Марта",
+          "dateLabel": "Вт 10 Марта",
+          "dayOrder": 2,
+          "title": "Мышцы тазового дна",
+          "type": "Коррекция",
+          "time": 34,
+          "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
+          "mediaType": "video",
+          "tags": [
+            "Таз"
+          ],
+          "inventory": "полотенце, мяч для пилатеса",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
           "id": "source-popovichfit-trainings-тренировки-осанка-и-шея-httpskinescopeio6uxautvptngp73t7knwtss",
           "source": "source-popovichfit",
           "section": "trainings",
@@ -3904,6 +3979,56 @@
             "Осанка"
           ],
           "inventory": "массажный мяч, полотенце, мяч для пилатеса",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
+          "id": "source-popovichfit-trainings-тренировки-верхний-плечевой-пояс-httpskinescopeio7xd6rswhdvf8xezo4naqmv",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Ср",
+          "date": "11",
+          "month": "Марта",
+          "dateLabel": "Ср 11 Марта",
+          "dayOrder": 3,
+          "title": "Верхний плечевой пояс",
+          "type": "Силовая",
+          "time": 40,
+          "iframeSrc": "https://kinescope.io/7xd6RsWHdVF8Xezo4NaqMv",
+          "mediaType": "video",
+          "tags": [
+            "Плечи"
+          ],
+          "inventory": "отягощения в зависимости от уровня подготовленности, лента для пилатеса (в зале - кроссовер), скамья (диван)",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
+          "id": "source-popovichfit-trainings-тренировки-мобильность-грудной-клетки-лопатки-httpskinescopeiogrkzcb6z1azbtsjsebrwni",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Ср",
+          "date": "11",
+          "month": "Марта",
+          "dateLabel": "Ср 11 Марта",
+          "dayOrder": 3,
+          "title": "Мобильность грудной клетки, лопатки",
+          "type": "Коррекция",
+          "time": 15,
+          "iframeSrc": "https://kinescope.io/gRKZcb6z1azBTsjsebRWNi",
+          "mediaType": "video",
+          "tags": [
+            "Мобильность"
+          ],
+          "inventory": "массажный мяч",
           "isBonus": false,
           "isLecture": false,
           "complexity": null
@@ -3959,6 +4084,31 @@
           "complexity": null
         },
         {
+          "id": "source-popovichfit-trainings-тренировки-осанка-и-шея-httpskinescopeio6uxautvptngp73t7knwtss",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Чт",
+          "date": "12",
+          "month": "Марта",
+          "dateLabel": "Чт 12 Марта",
+          "dayOrder": 4,
+          "title": "Осанка и шея",
+          "type": "Коррекция",
+          "time": 32,
+          "iframeSrc": "https://kinescope.io/6UXauTVPTnGP73t7KNwTsS",
+          "mediaType": "video",
+          "tags": [
+            "Осанка"
+          ],
+          "inventory": "массажный мяч, полотенце, мяч для пилатеса",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
           "id": "source-popovichfit-trainings-тренировки-пресс-работа-глубокого-блока-httpskinescopeiouqkcxpuedfzapjxcytbhdy",
           "source": "source-popovichfit",
           "section": "trainings",
@@ -3979,6 +4129,56 @@
             "Пресс"
           ],
           "inventory": "массажный мяч, мяч для пилатеса",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
+          "id": "source-popovichfit-trainings-тренировки-снятие-напряжения-с-таза-мобильность-httpskinescopeioks5p2dkz84hbprw8fx76kc",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Пт",
+          "date": "13",
+          "month": "Марта",
+          "dateLabel": "Пт 13 Марта",
+          "dayOrder": 5,
+          "title": "Снятие напряжения с таза, мобильность",
+          "type": "Коррекция",
+          "time": 21,
+          "iframeSrc": "https://kinescope.io/kS5p2dkz84HBPRw8fx76kC",
+          "mediaType": "video",
+          "tags": [
+            "Мобильность"
+          ],
+          "inventory": "массажный мяч",
+          "isBonus": false,
+          "isLecture": false,
+          "complexity": null
+        },
+        {
+          "id": "source-popovichfit-trainings-тренировки-ягодичная-круговая-httpskinescopeio5drnnkzxuqeldt8ezcngzw",
+          "source": "source-popovichfit",
+          "section": "trainings",
+          "folder": "Тренировки",
+          "subfolder": "",
+          "week": "1 неделя",
+          "weekday": "Пт",
+          "date": "13",
+          "month": "Марта",
+          "dateLabel": "Пт 13 Марта",
+          "dayOrder": 5,
+          "title": "Ягодичная круговая",
+          "type": "Силовая",
+          "time": 22,
+          "iframeSrc": "https://kinescope.io/5dRNNkZXUQELDt8ezCngZW",
+          "mediaType": "video",
+          "tags": [
+            "Ягодицы"
+          ],
+          "inventory": "отягощение (в зависимости от уровня подготовленности)",
           "isBonus": false,
           "isLecture": false,
           "complexity": null
@@ -7786,6 +7986,81 @@
       "complexity": null
     },
     {
+      "id": "source-popovichfit-trainings-тренировки-мобильность-таза-httpskinescopeioqad6wtbbzs5orsvguajtxc",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "9",
+      "month": "Марта",
+      "dateLabel": "Пн 9 Марта",
+      "dayOrder": 1,
+      "title": "Мобильность таза",
+      "type": "Коррекция",
+      "time": 23,
+      "iframeSrc": "https://kinescope.io/qad6wtbbzS5oRsvGUAJtXC",
+      "mediaType": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "массажный мяч",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
+      "id": "source-popovichfit-trainings-тренировки-ягодичная-базовая-httpskinescopeiofrodj1dqpldcksvfsjidug",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "9",
+      "month": "Марта",
+      "dateLabel": "Пн 9 Марта",
+      "dayOrder": 1,
+      "title": "Ягодичная базовая",
+      "type": "Силовая",
+      "time": 41,
+      "iframeSrc": "https://kinescope.io/froDj1dQPLdcKSVfSJiDUG",
+      "mediaType": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "отягощение в зависимости от уровня подготовленности, скамья (диван)",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
+      "id": "source-popovichfit-trainings-тренировки-мышцы-тазового-дна-httpskinescopeiodbx3b4eh4akn86jfhvexfm",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "10",
+      "month": "Марта",
+      "dateLabel": "Вт 10 Марта",
+      "dayOrder": 2,
+      "title": "Мышцы тазового дна",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
+      "mediaType": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "полотенце, мяч для пилатеса",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
       "id": "source-popovichfit-trainings-тренировки-осанка-и-шея-httpskinescopeio6uxautvptngp73t7knwtss",
       "source": "source-popovichfit",
       "section": "trainings",
@@ -7806,6 +8081,56 @@
         "Осанка"
       ],
       "inventory": "массажный мяч, полотенце, мяч для пилатеса",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
+      "id": "source-popovichfit-trainings-тренировки-верхний-плечевой-пояс-httpskinescopeio7xd6rswhdvf8xezo4naqmv",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "11",
+      "month": "Марта",
+      "dateLabel": "Ср 11 Марта",
+      "dayOrder": 3,
+      "title": "Верхний плечевой пояс",
+      "type": "Силовая",
+      "time": 40,
+      "iframeSrc": "https://kinescope.io/7xd6RsWHdVF8Xezo4NaqMv",
+      "mediaType": "video",
+      "tags": [
+        "Плечи"
+      ],
+      "inventory": "отягощения в зависимости от уровня подготовленности, лента для пилатеса (в зале - кроссовер), скамья (диван)",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
+      "id": "source-popovichfit-trainings-тренировки-мобильность-грудной-клетки-лопатки-httpskinescopeiogrkzcb6z1azbtsjsebrwni",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "11",
+      "month": "Марта",
+      "dateLabel": "Ср 11 Марта",
+      "dayOrder": 3,
+      "title": "Мобильность грудной клетки, лопатки",
+      "type": "Коррекция",
+      "time": 15,
+      "iframeSrc": "https://kinescope.io/gRKZcb6z1azBTsjsebRWNi",
+      "mediaType": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
       "isBonus": false,
       "isLecture": false,
       "complexity": null
@@ -7861,6 +8186,31 @@
       "complexity": null
     },
     {
+      "id": "source-popovichfit-trainings-тренировки-осанка-и-шея-httpskinescopeio6uxautvptngp73t7knwtss",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Чт",
+      "date": "12",
+      "month": "Марта",
+      "dateLabel": "Чт 12 Марта",
+      "dayOrder": 4,
+      "title": "Осанка и шея",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/6UXauTVPTnGP73t7KNwTsS",
+      "mediaType": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": "массажный мяч, полотенце, мяч для пилатеса",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
       "id": "source-popovichfit-trainings-тренировки-пресс-работа-глубокого-блока-httpskinescopeiouqkcxpuedfzapjxcytbhdy",
       "source": "source-popovichfit",
       "section": "trainings",
@@ -7881,6 +8231,56 @@
         "Пресс"
       ],
       "inventory": "массажный мяч, мяч для пилатеса",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
+      "id": "source-popovichfit-trainings-тренировки-снятие-напряжения-с-таза-мобильность-httpskinescopeioks5p2dkz84hbprw8fx76kc",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "13",
+      "month": "Марта",
+      "dateLabel": "Пт 13 Марта",
+      "dayOrder": 5,
+      "title": "Снятие напряжения с таза, мобильность",
+      "type": "Коррекция",
+      "time": 21,
+      "iframeSrc": "https://kinescope.io/kS5p2dkz84HBPRw8fx76kC",
+      "mediaType": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
+      "isBonus": false,
+      "isLecture": false,
+      "complexity": null
+    },
+    {
+      "id": "source-popovichfit-trainings-тренировки-ягодичная-круговая-httpskinescopeio5drnnkzxuqeldt8ezcngzw",
+      "source": "source-popovichfit",
+      "section": "trainings",
+      "folder": "Тренировки",
+      "subfolder": "",
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "13",
+      "month": "Марта",
+      "dateLabel": "Пт 13 Марта",
+      "dayOrder": 5,
+      "title": "Ягодичная круговая",
+      "type": "Силовая",
+      "time": 22,
+      "iframeSrc": "https://kinescope.io/5dRNNkZXUQELDt8ezCngZW",
+      "mediaType": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "отягощение (в зависимости от уровня подготовленности)",
       "isBonus": false,
       "isLecture": false,
       "complexity": null

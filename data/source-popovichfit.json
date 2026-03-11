@@ -6,6 +6,142 @@
       "date": "9",
       "month": "Марта",
       "dayOrder": 1,
+      "title": "Мобильность таза",
+      "type": "Коррекция",
+      "time": 23,
+      "iframeSrc": "https://kinescope.io/qad6wtbbzS5oRsvGUAJtXC",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "9",
+      "month": "Марта",
+      "dayOrder": 1,
+      "title": "Ягодичная базовая",
+      "type": "Силовая",
+      "time": 41,
+      "iframeSrc": "https://kinescope.io/froDj1dQPLdcKSVfSJiDUG",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "отягощение в зависимости от уровня подготовленности, скамья (диван)",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "10",
+      "month": "Марта",
+      "dayOrder": 2,
+      "title": "Мышцы тазового дна",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "полотенце, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "11",
+      "month": "Марта",
+      "dayOrder": 3,
+      "title": "Мобильность грудной клетки, лопатки",
+      "type": "Коррекция",
+      "time": 15,
+      "iframeSrc": "https://kinescope.io/gRKZcb6z1azBTsjsebRWNi",
+      "media_type": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "11",
+      "month": "Марта",
+      "dayOrder": 3,
+      "title": "Верхний плечевой пояс",
+      "type": "Силовая",
+      "time": 40,
+      "iframeSrc": "https://kinescope.io/7xd6RsWHdVF8Xezo4NaqMv",
+      "media_type": "video",
+      "tags": [
+        "Плечи"
+      ],
+      "inventory": "отягощения в зависимости от уровня подготовленности, лента для пилатеса (в зале - кроссовер), скамья (диван)",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Чт",
+      "date": "12",
+      "month": "Марта",
+      "dayOrder": 4,
+      "title": "Осанка и шея",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/6UXauTVPTnGP73t7KNwTsS",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": "массажный мяч, полотенце, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "13",
+      "month": "Марта",
+      "dayOrder": 5,
+      "title": "Снятие напряжения с таза, мобильность",
+      "type": "Коррекция",
+      "time": 21,
+      "iframeSrc": "https://kinescope.io/kS5p2dkz84HBPRw8fx76kC",
+      "media_type": null,
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "13",
+      "month": "Марта",
+      "dayOrder": 5,
+      "title": "Ягодичная круговая",
+      "type": "Силовая",
+      "time": 22,
+      "iframeSrc": "https://kinescope.io/5dRNNkZXUQELDt8ezCngZW",
+      "media_type": null,
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "отягощение (в зависимости от уровня подготовленности)",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "9",
+      "month": "Марта",
+      "dayOrder": 1,
       "title": "Дыхание, плоский живот и отсутствие отеков",
       "type": "Коррекция",
       "time": 36,
