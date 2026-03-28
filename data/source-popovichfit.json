@@ -1,6 +1,7 @@
 {
   "trainings": [
     {
+      "training": "Коррекция",
       "week": "1 неделя",
       "weekday": "Пн",
       "date": "2",
@@ -11,13 +12,12 @@
       "time": 36,
       "iframeSrc": "https://kinescope.io/5Z4dQwNwHDUNRudDSSriRQ",
       "media_type": "video",
-      "tags": [
-        "Дыхание"
-      ],
+      "tags": ["Дыхание"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "1 неделя",
       "weekday": "Вт",
       "date": "3",
@@ -28,13 +28,12 @@
       "time": 33,
       "iframeSrc": "https://kinescope.io/hVQrnM7GpvhN6j94DcGVwX",
       "media_type": "video",
-      "tags": [
-        "Отеки"
-      ],
+      "tags": ["Отеки"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "1 неделя",
       "weekday": "Ср",
       "date": "4",
@@ -45,13 +44,12 @@
       "time": 34,
       "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
       "media_type": "video",
-      "tags": [
-        "Таз"
-      ],
+      "tags": ["Таз"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "1 неделя",
       "weekday": "Чт",
       "date": "5",
@@ -62,13 +60,12 @@
       "time": 27,
       "iframeSrc": "https://kinescope.io/8e6SnAS3NGgSJsEiCGogQm",
       "media_type": "video",
-      "tags": [
-        "Мобильность"
-      ],
+      "tags": ["Мобильность"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "1 неделя",
       "weekday": "Пт",
       "date": "6",
@@ -79,13 +76,12 @@
       "time": 37,
       "iframeSrc": "https://kinescope.io/5kvj7ZnDmNb7mecBTB2U5e",
       "media_type": "video",
-      "tags": [
-        "Осанка"
-      ],
+      "tags": ["Осанка"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "2 неделя",
       "weekday": "Пн",
       "date": "9",
@@ -96,13 +92,12 @@
       "time": 32,
       "iframeSrc": "https://kinescope.io/rDGTrVETkFz9nmjv9TEwf6",
       "media_type": "video",
-      "tags": [
-        "Таз"
-      ],
+      "tags": ["Таз"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "2 неделя",
       "weekday": "Вт",
       "date": "10",
@@ -113,13 +108,12 @@
       "time": 30,
       "iframeSrc": "https://kinescope.io/ncqFWhZXWzz8CGtsj15MNi",
       "media_type": "video",
-      "tags": [
-        "Бедра"
-      ],
+      "tags": ["Бедра"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "2 неделя",
       "weekday": "Ср",
       "date": "11",
@@ -130,13 +124,12 @@
       "time": 31,
       "iframeSrc": "https://kinescope.io/9GpVWfUWiXjWThod4U6Xr5",
       "media_type": "video",
-      "tags": [
-        "Осанка"
-      ],
+      "tags": ["Осанка"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "2 неделя",
       "weekday": "Чт",
       "date": "12",
@@ -147,13 +140,12 @@
       "time": 29,
       "iframeSrc": "https://kinescope.io/uqkcXpueDfZapJXCytBHDy",
       "media_type": "video",
-      "tags": [
-        "Пресс"
-      ],
+      "tags": ["Пресс"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "2 неделя",
       "weekday": "Пт",
       "date": "13",
@@ -164,13 +156,12 @@
       "time": 29,
       "iframeSrc": "https://kinescope.io/i8J1WFfPYcQqFj4WSUMpTs",
       "media_type": "video",
-      "tags": [
-        "Ягодицы"
-      ],
+      "tags": ["Ягодицы"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "3 неделя",
       "weekday": "Пн",
       "date": "16",
@@ -181,13 +172,12 @@
       "time": 37,
       "iframeSrc": "https://kinescope.io/eqJjBAjAzafm9kTmiFFiBg",
       "media_type": "video",
-      "tags": [
-        "Дыхание"
-      ],
+      "tags": ["Дыхание"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "3 неделя",
       "weekday": "Вт",
       "date": "17",
@@ -198,13 +188,12 @@
       "time": 29,
       "iframeSrc": "https://kinescope.io/26dLhnCLZtEWJcU7EiGHrL",
       "media_type": "video",
-      "tags": [
-        "КОР"
-      ],
+      "tags": ["КОР"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "3 неделя",
       "weekday": "Ср",
       "date": "18",
@@ -215,13 +204,12 @@
       "time": 32,
       "iframeSrc": "https://kinescope.io/uKVywbGqUxe2sG6KZiR1Mn",
       "media_type": "video",
-      "tags": [
-        "Спина"
-      ],
+      "tags": ["Спина"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "3 неделя",
       "weekday": "Чт",
       "date": "19",
@@ -232,13 +220,12 @@
       "time": 28,
       "iframeSrc": "https://kinescope.io/ecYFYXM54ybitDfU8YP4rR",
       "media_type": "video",
-      "tags": [
-        "Пресс"
-      ],
+      "tags": ["Пресс"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "3 неделя",
       "weekday": "Пт",
       "date": "20",
@@ -249,13 +236,12 @@
       "time": 31,
       "iframeSrc": "https://kinescope.io/s8UxxF1KD4Pa7V9nfMm4Av",
       "media_type": "video",
-      "tags": [
-        "Спина"
-      ],
+      "tags": ["Спина"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "4 неделя",
       "weekday": "Пн",
       "date": "23",
@@ -266,13 +252,12 @@
       "time": 38,
       "iframeSrc": "https://kinescope.io/7KKLSUeuYawowCvNQ1BR9Z",
       "media_type": "video",
-      "tags": [
-        "МТД"
-      ],
+      "tags": ["МТД"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "4 неделя",
       "weekday": "Вт",
       "date": "24",
@@ -283,13 +268,12 @@
       "time": 31,
       "iframeSrc": "https://kinescope.io/idUXeqVpYK2NsvGBBChrZo",
       "media_type": "video",
-      "tags": [
-        "Осанка"
-      ],
+      "tags": ["Осанка"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "4 неделя",
       "weekday": "Ср",
       "date": "25",
@@ -300,13 +284,12 @@
       "time": 30,
       "iframeSrc": "https://kinescope.io/5XF3ng8ufDAaRufuWD6uTb",
       "media_type": "video",
-      "tags": [
-        "КОР"
-      ],
+      "tags": ["КОР"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "4 неделя",
       "weekday": "Чт",
       "date": "26",
@@ -317,13 +300,12 @@
       "time": 38,
       "iframeSrc": "https://kinescope.io/dsg2EUTuRvgrL5w3tiupPy",
       "media_type": "video",
-      "tags": [
-        "Лимфодренаж"
-      ],
+      "tags": ["Лимфодренаж"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
       "week": "4 неделя",
       "weekday": "Пт",
       "date": "27",
@@ -334,13 +316,282 @@
       "time": 24,
       "iframeSrc": "https://kinescope.io/w4zrn4kWVGKD3r8fXy19sT",
       "media_type": "video",
-      "tags": [
-        "Осанка"
-      ],
+      "tags": ["Осанка"],
       "inventory": "",
       "is_bonus": 0
     },
     {
+      "training": "Коррекция",
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "9",
+      "month": "Марта",
+      "dayOrder": 1,
+      "title": "Дыхание, плоский живот и отсутствие отеков",
+      "type": "Коррекция",
+      "time": 36,
+      "iframeSrc": "https://kinescope.io/5Z4dQwNwHDUNRudDSSriRQ",
+      "media_type": "video",
+      "tags": [
+        "Дыхание"
+      ],
+      "inventory": "2 массажных мяча, полотенце, лента для пилатеса (эспандер, колготки)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "10",
+      "month": "Марта",
+      "dayOrder": 2,
+      "title": "Осанка и шея",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/6UXauTVPTnGP73t7KNwTsS",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": "массажный мяч, полотенце, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "11",
+      "month": "Марта",
+      "dayOrder": 3,
+      "title": "Проблемные зоны бедер",
+      "type": "Коррекция",
+      "time": 30,
+      "iframeSrc": "https://kinescope.io/ncqFWhZXWzz8CGtsj15MNi",
+      "media_type": "video",
+      "tags": [
+        "Бедра"
+      ],
+      "inventory": "2 массажных мяча, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "1 неделя",
+      "weekday": "Чт",
+      "date": "12",
+      "month": "Марта",
+      "dayOrder": 4,
+      "title": "Мышцы тазового дна",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "полотенце, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "13",
+      "month": "Марта",
+      "dayOrder": 5,
+      "title": "Пресс, работа глубокого блока",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/uqkcXpueDfZapJXCytBHDy",
+      "media_type": "video",
+      "tags": [
+        "Пресс"
+      ],
+      "inventory": "массажный мяч, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "2 неделя",
+      "weekday": "Пн",
+      "date": "16",
+      "month": "Марта",
+      "dayOrder": 6,
+      "title": "Осанка",
+      "type": "Коррекция",
+      "time": 37,
+      "iframeSrc": "https://kinescope.io/5kvj7ZnDmNb7mecBTB2U5e",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": "мяч для пилатеса, 2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "2 неделя",
+      "weekday": "Вт",
+      "date": "17",
+      "month": "Марта",
+      "dayOrder": 7,
+      "title": "Проблемные зоны бедер, мобильность таза",
+      "type": "Коррекция",
+      "time": 27,
+      "iframeSrc": "https://kinescope.io/8e6SnAS3NGgSJsEiCGogQm",
+      "media_type": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "2 неделя",
+      "weekday": "Ср",
+      "date": "18",
+      "month": "Марта",
+      "dayOrder": 8,
+      "title": "Дыхание, пресс и тазовое дно",
+      "type": "Коррекция",
+      "time": 35,
+      "iframeSrc": "https://kinescope.io/3mAGzx3hSbRr5Vj5j8VPCi",
+      "media_type": "video",
+      "tags": [
+        "Дыхание"
+      ],
+      "inventory": "массажный мяч, мяч для пилатеса, эспандер",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "2 неделя",
+      "weekday": "Чт",
+      "date": "19",
+      "month": "Марта",
+      "dayOrder": 9,
+      "title": "Валики под мышками, отеки",
+      "type": "Коррекция",
+      "time": 33,
+      "iframeSrc": "https://kinescope.io/hVQrnM7GpvhN6j94DcGVwX",
+      "media_type": null,
+      "tags": [
+        "Отеки"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "2 неделя",
+      "weekday": "Пт",
+      "date": "20",
+      "month": "Марта",
+      "dayOrder": 10,
+      "title": "Активация ягодиц",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/i8J1WFfPYcQqFj4WSUMpTs",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "3 неделя",
+      "weekday": "Пн",
+      "date": "23",
+      "month": "Марта",
+      "dayOrder": 11,
+      "title": "Грудобрюшная и тазовая диафрагма",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/rDGTrVETkFz9nmjv9TEwf6",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "массажный мяч, мяч для пилатеса, стул",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "3 неделя",
+      "weekday": "Вт",
+      "date": "24",
+      "month": "Марта",
+      "dayOrder": 12,
+      "title": "Проблемные зоны бедер и ягодиц",
+      "type": "Коррекция",
+      "time": 27,
+      "iframeSrc": "https://kinescope.io/uoiCdKBpqu9U9W9eUivPcx",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "3 неделя",
+      "weekday": "Ср",
+      "date": "25",
+      "month": "Марта",
+      "dayOrder": 13,
+      "title": "Мышцы брюшного пресса",
+      "type": "Коррекция",
+      "time": 28,
+      "iframeSrc": "https://kinescope.io/ecYFYXM54ybitDfU8YP4rR",
+      "media_type": null,
+      "tags": [
+        "Пресс"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "3 неделя",
+      "weekday": "Чт",
+      "date": "26",
+      "month": "Марта",
+      "dayOrder": 14,
+      "title": "Комплексная работа с осанкой и Кором",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/26dLhnCLZtEWJcU7EiGHrL",
+      "media_type": "video",
+      "tags": [
+        "КОР"
+      ],
+      "inventory": "массажный мяч, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Коррекция",
+      "week": "3 неделя",
+      "weekday": "Пт",
+      "date": "27",
+      "month": "Марта",
+      "dayOrder": 15,
+      "title": "Активный лимфодренаж всего тела, проблемные зоны",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/uKVywbGqUxe2sG6KZiR1Mn",
+      "media_type": "video",
+      "tags": [
+        "Спина"
+      ],
+      "inventory": "массажный мяч, ролл (полотенце банное)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Пн",
       "date": "9",
@@ -358,6 +609,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Пн",
       "date": "9",
@@ -375,6 +627,25 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "10",
+      "month": "Марта",
+      "dayOrder": 2,
+      "title": "Мышцы тазового дна",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/dbx3B4eh4AkN86jfhveXfM",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "полотенце, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Ср",
       "date": "11",
@@ -392,6 +663,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Ср",
       "date": "11",
@@ -409,6 +681,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Чт",
       "date": "12",
@@ -426,6 +699,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Пт",
       "date": "13",
@@ -443,6 +717,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "1 неделя",
       "weekday": "Пт",
       "date": "13",
@@ -457,6 +732,290 @@
         "Ягодицы"
       ],
       "inventory": "отягощение (в зависимости от уровня подготовленности)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Пн",
+      "date": "16",
+      "month": "Марта",
+      "dayOrder": 6,
+      "title": "Мобильность таза",
+      "type": "Коррекция",
+      "time": 24,
+      "iframeSrc": "https://kinescope.io/a2YTqfKAK5VewecmcLL1Kf",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "ролл для МФР (полотенце)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Пн",
+      "date": "16",
+      "month": "Марта",
+      "dayOrder": 6,
+      "title": "Ягодицы и бедра",
+      "type": "Силовая",
+      "time": 43,
+      "iframeSrc": "https://kinescope.io/ki3fkWVpcUtry2AtYXH9qR",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "отягощения в зависимости от уровня подготовленности, скамья (диван)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Вт",
+      "date": "17",
+      "month": "Марта",
+      "dayOrder": 7,
+      "title": "Дыхание, пресс и тазовое дно",
+      "type": "Коррекция",
+      "time": 35,
+      "iframeSrc": "https://kinescope.io/3mAGzx3hSbRr5Vj5j8VPCi",
+      "media_type": "video",
+      "tags": [
+        "Дыхание"
+      ],
+      "inventory": "массажный мяч, мяч для пилатеса, эспандер",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Ср",
+      "date": "18",
+      "month": "Марта",
+      "dayOrder": 8,
+      "title": "Мобильность грудной клетки",
+      "type": "Коррекция",
+      "time": 14,
+      "iframeSrc": "https://kinescope.io/c53eYBX9SBjRUKTHnPUovT",
+      "media_type": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "ролл для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Ср",
+      "date": "18",
+      "month": "Марта",
+      "dayOrder": 8,
+      "title": "Верхний плечевой пояс",
+      "type": "Силовая",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/tpoQsPR8iKUxkucUivtwkT",
+      "media_type": "video",
+      "tags": [
+        "Плечи"
+      ],
+      "inventory": "отягощения в зависимости от уровня подготовленности, скамья , кроссовер (эспандер)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Чт",
+      "date": "19",
+      "month": "Марта",
+      "dayOrder": 9,
+      "title": "Проблемные зоны бедер",
+      "type": "Коррекция",
+      "time": 30,
+      "iframeSrc": "https://kinescope.io/ncqFWhZXWzz8CGtsj15MNi",
+      "media_type": "video",
+      "tags": [
+        "Бедра"
+      ],
+      "inventory": "2 массажных мяча, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Пт",
+      "date": "20",
+      "month": "Марта",
+      "dayOrder": 10,
+      "title": "Мобильность таза",
+      "type": "Коррекция",
+      "time": 18,
+      "iframeSrc": "https://kinescope.io/eirqSyXEDS57gpvxYXh5vN",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "2 неделя",
+      "weekday": "Пт",
+      "date": "20",
+      "month": "Марта",
+      "dayOrder": 10,
+      "title": "Ягодичная круговая",
+      "type": "Силовая",
+      "time": 22,
+      "iframeSrc": "https://kinescope.io/wtnTwmwH7YApvF2SKkLao2",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "отягощения в зависимости уровня подготовки, скамья (диван), лента для пилатеса (эспандер/пояс от халата/колготки)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Пн",
+      "date": "23",
+      "month": "Марта",
+      "dayOrder": 11,
+      "title": "Мобильность: стопы, колени, бедра",
+      "type": "Коррекция",
+      "time": 15,
+      "iframeSrc": "https://kinescope.io/oP97MJr9v1cRYtZ8XnScQJ",
+      "media_type": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Пн",
+      "date": "23",
+      "month": "Марта",
+      "dayOrder": 11,
+      "title": "Базовая на ягодицы",
+      "type": "Силовая",
+      "time": 35,
+      "iframeSrc": "https://kinescope.io/fizx3pEjzaCDnvfT2wPnSf",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "отягощения в зависимости от уровня подготовленности, скамья (диван)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Вт",
+      "date": "24",
+      "month": "Марта",
+      "dayOrder": 12,
+      "title": "Комплексная работа с осанкой и Кором",
+      "type": "Коррекция",
+      "time": 29,
+      "iframeSrc": "https://kinescope.io/26dLhnCLZtEWJcU7EiGHrL",
+      "media_type": "video",
+      "tags": [
+        "КОР"
+      ],
+      "inventory": "массажный мяч, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Ср",
+      "date": "25",
+      "month": "Марта",
+      "dayOrder": 13,
+      "title": "Мобильность грудной клетки и лопаток",
+      "type": "Коррекция",
+      "time": 21,
+      "iframeSrc": "https://kinescope.io/ueusj5cSWCAkYfK7yygxcF",
+      "media_type": "video",
+      "tags": [
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч, лента для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Ср",
+      "date": "25",
+      "month": "Марта",
+      "dayOrder": 13,
+      "title": "Силовая на верхний плечевой пояс",
+      "type": "Силовая",
+      "time": 36,
+      "iframeSrc": "https://kinescope.io/3LfkzRXP6nsPotwoQ3XsgT",
+      "media_type": "video",
+      "tags": [
+        "Плечевой пояс"
+      ],
+      "inventory": "отягощения в зависимости от уровня подготовленности, кроссовер (лента для пилатеса)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Чт",
+      "date": "26",
+      "month": "Марта",
+      "dayOrder": 14,
+      "title": "Проблемные зоны бедер и ягодиц",
+      "type": "Коррекция",
+      "time": 27,
+      "iframeSrc": "https://kinescope.io/uoiCdKBpqu9U9W9eUivPcx",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Пт",
+      "date": "27",
+      "month": "Марта",
+      "dayOrder": 15,
+      "title": "Активация ягодиц, бедра",
+      "type": "Коррекция",
+      "time": 18,
+      "iframeSrc": "https://kinescope.io/0NRodeSyREKyjL2JqXbZQt",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "3 неделя",
+      "weekday": "Пт",
+      "date": "27",
+      "month": "Марта",
+      "dayOrder": 15,
+      "title": "Ягодичная круговая",
+      "type": "Силовая",
+      "time": 20,
+      "iframeSrc": "https://kinescope.io/qcG6v6NuQrCKtgroEaUJ7A",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": "массажный мяч, кольцевая лента (можно заменить на ленту для пилатеса), лента для пилатеса (в зале - кроссовер), отягощения",
       "is_bonus": 0
     }
   ],
@@ -1537,6 +2096,19 @@
     {
       "folder": "Бонусные тренировки",
       "subfolder": "Боли в районе таза и поясницы",
+      "title": "Комплекс после дороги",
+      "type": null,
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/wxE5capymHQdqpVpmL9QSi",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "массажный мяч",
+      "is_lecture": false,
+      "complexity": 1
+    },
+    {
+      "folder": "Бонусные тренировки",
+      "subfolder": "Боли в районе таза и поясницы",
       "title": "Снятие напряжения с поясницы и крестца",
       "type": null,
       "time": 32,
@@ -1888,6 +2460,19 @@
     {
       "folder": "Бонусные тренировки",
       "subfolder": "Галифе, отеки бедер",
+      "title": "Снятие напряжения с таза, устранение отечности",
+      "type": null,
+      "time": 36,
+      "iframeSrc": "https://kinescope.io/a5oR4ympkPADZTdeXb46nd",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "массажный мяч",
+      "is_lecture": false,
+      "complexity": 1
+    },
+    {
+      "folder": "Бонусные тренировки",
+      "subfolder": "Галифе, отеки бедер",
       "title": "Свободный таз, отсутствие галифе и болей в ТБС",
       "type": null,
       "time": 40,
@@ -1897,6 +2482,19 @@
       "inventory": "массажный мяч",
       "is_lecture": false,
       "complexity": 1
+    },
+    {
+      "folder": "Бонусные тренировки",
+      "subfolder": "Галифе, отеки бедер",
+      "title": "Задняя поверхность бедра, целлюлит",
+      "type": null,
+      "time": 26,
+      "iframeSrc": "https://kinescope.io/0MMNmbJbSyn79bvoev3t22",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "массажный мяч",
+      "is_lecture": false,
+      "complexity": 2
     },
     {
       "folder": "Бонусные тренировки",
@@ -2012,6 +2610,19 @@
       "media_type": "video",
       "tags": [],
       "inventory": "массажный мяч, пилатес мяч",
+      "is_lecture": false,
+      "complexity": 1
+    },
+    {
+      "folder": "Бонусные тренировки",
+      "subfolder": "На все тело",
+      "title": "Комплекс после дороги",
+      "type": null,
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/wxE5capymHQdqpVpmL9QSi",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "массажный мяч",
       "is_lecture": false,
       "complexity": 1
     },
@@ -2200,6 +2811,19 @@
     {
       "folder": "Бонусные тренировки",
       "subfolder": "МФР и тейпирование",
+      "title": "МФР и упражнения для стоп",
+      "type": null,
+      "time": 24,
+      "iframeSrc": "https://kinescope.io/9CBEQyFCs9rwMCLpNcRooo",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "мяч trigger point",
+      "is_lecture": false,
+      "complexity": 1
+    },
+    {
+      "folder": "Бонусные тренировки",
+      "subfolder": "МФР и тейпирование",
       "title": "Комплекс по МФР с полотенцем",
       "type": null,
       "time": 26,
@@ -2207,6 +2831,19 @@
       "media_type": "video",
       "tags": [],
       "inventory": "полотенце",
+      "is_lecture": false,
+      "complexity": 1
+    },
+    {
+      "folder": "Бонусные тренировки",
+      "subfolder": "МФР и тейпирование",
+      "title": "Снятие напряжения с ног, свобода движения коленей",
+      "type": null,
+      "time": 35,
+      "iframeSrc": "https://kinescope.io/pk8Tz5cJuSEYGPqrrj9RYH",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "ролл МФР",
       "is_lecture": false,
       "complexity": 1
     },

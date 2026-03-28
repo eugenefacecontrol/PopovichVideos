@@ -3,6 +3,7 @@ import json
 import re
 from pathlib import Path
 from collections import defaultdict
+from typing import Union, Optional, List, Dict
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / 'data'
@@ -63,7 +64,7 @@ def parse_json_file(path: Path) -> list[dict]:
     return items
 
 
-def month_to_number(month: str | None) -> int:
+def month_to_number(month: Optional[str]) -> int:
     """Convert Russian month name to number for sorting"""
     if not month:
         return 999
@@ -76,11 +77,12 @@ def month_to_number(month: str | None) -> int:
 
 
 def main() -> None:
-    all_items: list[dict] = []
+    all_items: List[Dict] = []
     for path in sorted(DATA_DIR.glob('source-*.json')):
         all_items.extend(parse_json_file(path))
 
     all_items.sort(key=lambda x: (
+        x['type'] or '',
         x['folder'] or '',
         x['subfolder'] or '',
         x['week'] or '',
@@ -90,7 +92,7 @@ def main() -> None:
         x['title'] or '',
     ))
 
-    folders: dict[str, dict] = {}
+    folders: Dict[str, Dict] = {}
     for item in all_items:
         folder_name = item['folder'] or 'Без папки'
         if folder_name not in folders:

@@ -4,6 +4,7 @@ const state = {
   filters: {
     search: '',
     folder: '',
+    type: '',
     month: '',
     dateStart: '',
     dateEnd: '',
@@ -20,6 +21,7 @@ const el = {
   logoutBtn: document.getElementById('logoutBtn'),
   searchInput: document.getElementById('searchInput'),
   folderFilter: document.getElementById('folderFilter'),
+  typeFilter: document.getElementById('typeFilter'),
   monthFilter: document.getElementById('monthFilter'),
   dateStartFilter: document.getElementById('dateStartFilter'),
   dateEndFilter: document.getElementById('dateEndFilter'),
@@ -79,6 +81,7 @@ function fillSelect(select, values, label) {
 
 function buildFilters(catalog) {
   fillSelect(el.folderFilter, uniqueSorted(catalog.items.map((item) => item.folder)), 'All folders');
+  fillSelect(el.typeFilter, uniqueSorted(catalog.items.map((item) => item.type)), 'All types');
   fillSelect(el.monthFilter, uniqueSorted(catalog.items.map((item) => item.month)), 'All months');
 }
 
@@ -114,6 +117,7 @@ function matchesFilters(item) {
 
   if (q && !haystack.includes(q)) return false;
   if (state.filters.folder && item.folder !== state.filters.folder) return false;
+  if (state.filters.type && item.type !== state.filters.type) return false;
   if (state.filters.month && item.month !== state.filters.month) return false;
 
   if (state.filters.dateStart || state.filters.dateEnd) {
@@ -226,6 +230,11 @@ async function loadCatalog() {
   if (!response.ok) throw new Error(`Failed to load catalog.json: ${response.status}`);
   state.catalog = await response.json();
   buildFilters(state.catalog);
+  // Default to show trainings
+  if (!state.filters.folder) {
+    state.filters.folder = 'Тренировки';
+    el.folderFilter.value = 'Тренировки';
+  }
   render();
 }
 
@@ -269,6 +278,11 @@ function bindEvents() {
 
   el.folderFilter.addEventListener('change', (event) => {
     state.filters.folder = event.target.value;
+    render();
+  });
+
+  el.typeFilter.addEventListener('change', (event) => {
+    state.filters.type = event.target.value;
     render();
   });
 
