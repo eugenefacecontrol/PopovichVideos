@@ -5,6 +5,7 @@ const state = {
     search: '',
     folder: '',
     type: '',
+    week: '',
     month: '',
     dateStart: '',
     dateEnd: '',
@@ -22,6 +23,7 @@ const el = {
   searchInput: document.getElementById('searchInput'),
   folderFilter: document.getElementById('folderFilter'),
   typeFilter: document.getElementById('typeFilter'),
+  weekFilter: document.getElementById('weekFilter'),
   monthFilter: document.getElementById('monthFilter'),
   dateStartFilter: document.getElementById('dateStartFilter'),
   dateEndFilter: document.getElementById('dateEndFilter'),
@@ -82,6 +84,7 @@ function fillSelect(select, values, label) {
 function buildFilters(catalog) {
   fillSelect(el.folderFilter, uniqueSorted(catalog.items.map((item) => item.folder)), 'All folders');
   fillSelect(el.typeFilter, uniqueSorted(catalog.items.map((item) => item.type)), 'All types');
+  fillSelect(el.weekFilter, uniqueSorted(catalog.items.map((item) => item.week)), 'All weeks');
   fillSelect(el.monthFilter, uniqueSorted(catalog.items.map((item) => item.month)), 'All months');
 }
 
@@ -118,6 +121,7 @@ function matchesFilters(item) {
   if (q && !haystack.includes(q)) return false;
   if (state.filters.folder && item.folder !== state.filters.folder) return false;
   if (state.filters.type && item.type !== state.filters.type) return false;
+  if (state.filters.week && item.week !== state.filters.week) return false;
   if (state.filters.month && item.month !== state.filters.month) return false;
 
   if (state.filters.dateStart || state.filters.dateEnd) {
@@ -235,6 +239,11 @@ async function loadCatalog() {
     state.filters.folder = 'Тренировки';
     el.folderFilter.value = 'Тренировки';
   }
+  // Default to current month
+  if (!state.filters.month) {
+    state.filters.month = 'Марта';
+    el.monthFilter.value = 'Марта';
+  }
   render();
 }
 
@@ -283,6 +292,11 @@ function bindEvents() {
 
   el.typeFilter.addEventListener('change', (event) => {
     state.filters.type = event.target.value;
+    render();
+  });
+
+  el.weekFilter.addEventListener('change', (event) => {
+    state.filters.week = event.target.value;
     render();
   });
 

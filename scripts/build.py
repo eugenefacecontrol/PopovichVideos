@@ -76,6 +76,15 @@ def month_to_number(month: Optional[str]) -> int:
     return month_map.get(month.lower(), 999)
 
 
+def week_to_number(week: Optional[str]) -> int:
+    """Extract week number from 'X неделя'"""
+    if not week:
+        return 999
+    import re
+    match = re.match(r'(\d+)', week)
+    return int(match.group(1)) if match else 999
+
+
 def main() -> None:
     all_items: List[Dict] = []
     for path in sorted(DATA_DIR.glob('source-*.json')):
@@ -85,7 +94,7 @@ def main() -> None:
         x['type'] or '',
         x['folder'] or '',
         x['subfolder'] or '',
-        x['week'] or '',
+        week_to_number(x['week']),
         month_to_number(x['month']),
         int(x['date']) if x['date'] and str(x['date']).isdigit() else 999,
         x['dayOrder'] if x['dayOrder'] is not None else 999,
