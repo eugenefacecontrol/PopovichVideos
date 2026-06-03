@@ -2033,6 +2033,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Пн",
       "date": "4",
@@ -2050,6 +2051,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Пн",
       "date": "4",
@@ -2065,6 +2067,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Вт",
       "date": "5",
@@ -2088,6 +2091,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Ср",
       "date": "6",
@@ -2105,6 +2109,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Ср",
       "date": "6",
@@ -2122,6 +2127,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Чт",
       "date": "7",
@@ -2149,6 +2155,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Пт",
       "date": "8",
@@ -2175,6 +2182,7 @@
       "is_bonus": 0
     },
     {
+      "training": "Силовая",
       "week": "4 неделя",
       "weekday": "Пт",
       "date": "8",
@@ -2191,6 +2199,186 @@
         "Бедра"
       ],
       "inventory": "отягощение, лента для пилатеса (эспандер, кроссовер в зале)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "18",
+      "month": "Мая",
+      "dayOrder": 1,
+      "title": "Мобильность таза",
+      "type": "Коррекция",
+      "time": 20,
+      "iframeSrc": "https://kinescope.io/qJtz4SdfFNSganT7oiWbwb",
+      "media_type": "video",
+      "tags": [
+        "Таз",
+        "Коврик на полу",
+        "Отеки",
+        "МТД",
+        "Бедра",
+        "Ягодицы",
+        "Мобильность",
+        "Колени"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "18",
+      "month": "Мая",
+      "dayOrder": 1,
+      "title": "Ягодичная базовая",
+      "type": "Силовая",
+      "time": 44,
+      "iframeSrc": "https://kinescope.io/jnNy4TGZqrm7SG8BXq3NDK",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы",
+        "Коврик на полу",
+        "Спина",
+        "Бедра"
+      ],
+      "inventory": "лента для пилатеса (эспандер), стул / скамья",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "19",
+      "month": "Мая",
+      "dayOrder": 2,
+      "title": "Разворачиваем плечи",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/tkRqtPiwGpW4mT61iWytmJ",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "Шея",
+        "Осанка",
+        "Спина",
+        "КОР",
+        "Мобильность",
+        "Лицо",
+        "Коврик на полу"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "20",
+      "month": "Мая",
+      "dayOrder": 3,
+      "title": "Мобильность грудной клетки, лопатки",
+      "type": "Коррекция",
+      "time": 15,
+      "iframeSrc": "https://kinescope.io/gRKZcb6z1azBTsjsebRWNi",
+      "media_type": "video",
+      "tags": [
+        "Мобильность",
+        "Спина",
+        "Коврик на полу"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "20",
+      "month": "Мая",
+      "dayOrder": 3,
+      "title": "Верхний плечевой пояс",
+      "type": "Силовая",
+      "time": 40,
+      "iframeSrc": "https://kinescope.io/7xd6RsWHdVF8Xezo4NaqMv",
+      "media_type": "video",
+      "tags": [
+        "Плечи",
+        "Спина"
+      ],
+      "inventory": "отягощения в зависимости от уровня подготовленности, лента для пилатеса (в зале - кроссовер), скамья (диван)",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Чт",
+      "date": "21",
+      "month": "Мая",
+      "dayOrder": 4,
+      "title": "Живот и тазовое дно",
+      "type": "Коррекция",
+      "time": 37,
+      "iframeSrc": "https://kinescope.io/gRgvWwU1j9nbfqT6BLUjhK",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "МТД",
+        "Таз",
+        "Бедра",
+        "Осанка",
+        "КОР",
+        "Мобильность",
+        "Коврик на полу"
+      ],
+      "inventory": "2 массажных мяча, мяч для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "22",
+      "month": "Мая",
+      "dayOrder": 5,
+      "title": "Снятие напряжения с таза, мобильность",
+      "type": "Коррекция",
+      "time": 15,
+      "iframeSrc": "https://kinescope.io/if3PjqANCj2wY8t3noRyQd",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "МТД",
+        "Боли в районе таза и поясницы",
+        "КОР",
+        "Стопа",
+        "Мобильность",
+        "Колени",
+        "Коврик на полу"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "training": "Силовая",
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "22",
+      "month": "Мая",
+      "dayOrder": 5,
+      "title": "Круговая ягодичная",
+      "type": "Силовая",
+      "time": 24,
+      "iframeSrc": "https://kinescope.io/9qYoNBk6by78qntCwHaLrj",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы",
+        "Пресс",
+        "Бедра"
+      ],
+      "inventory": "отягощение, лента для пилатеса (эспандер)",
       "is_bonus": 0
     }
   ],
