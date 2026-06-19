@@ -482,8 +482,8 @@
                   <td>${escapeHtml(item.restBetweenSets)}</td>
                   <td>${escapeHtml(Object.values(item.workingWeight || {}).filter(Boolean).join(' / '))}</td>
                   <td>
-                    ${videoUrls.map((url, idx) => `<a href="${escapeHtml(url)}">video ${idx + 1}</a>`).join('<br>')}
-                    ${!videoUrls.length && item.articleUrl ? `<a href="${escapeHtml(item.articleUrl)}">source article</a>` : ''}
+                    ${videoUrls.map((url, idx) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">video ${idx + 1}</a>`).join('<br>')}
+                    ${!videoUrls.length && item.articleUrl ? `<a href="${escapeHtml(item.articleUrl)}" target="_blank" rel="noopener noreferrer">source article</a>` : ''}
                     ${item.video?.error ? `<br><span class="error">${escapeHtml(item.video.error)}</span>` : ''}
                   </td>
                 </tr>`;
