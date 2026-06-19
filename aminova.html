@@ -31,6 +31,13 @@
     .toc-workout { margin: 8px 0 0 18px; }
     .toc-exercises { columns: 2; margin: 6px 0 0 18px; padding-left: 18px; }
     .toc-exercises li { break-inside: avoid; margin-bottom: 4px; }
+    .workout-panel { margin: 14px 0 28px; border: 1px solid #d8dee4; border-radius: 8px; background: #ffffff; overflow: hidden; }
+    .workout-panel > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; background: #f6f8fa; border-bottom: 1px solid #d8dee4; }
+    .workout-panel:not([open]) > summary { border-bottom: 0; }
+    .workout-summary-title { font-size: 18px; }
+    .workout-summary-count { flex: 0 0 auto; color: #4b5563; font-size: 13px; font-weight: 600; }
+    .workout-panel .intro { margin: 14px; }
+    .workout-panel table { width: calc(100% - 28px); margin: 12px 14px 18px; }
     .back-to-top { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: inline-block; padding: 9px 12px; border: 1px solid #9aa4b2; border-radius: 999px; background: #ffffff; color: #0969da; text-decoration: none; box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14); }
     .back-to-top:hover { text-decoration: underline; }
     @media (max-width: 760px) {
@@ -38,30 +45,34 @@
       h1 { font-size: 24px; }
       h2 { font-size: 20px; }
       h3 { font-size: 18px; }
+      body > section:not(.guide) > h2 { position: sticky; top: 0; z-index: 10; margin: 18px -12px 10px; padding: 10px 12px; background: #ffffff; border-bottom: 1px solid #e5e7eb; }
       .guide, .toc { padding: 12px; margin: 14px 0; }
       .guide details > summary, .toc details > summary { width: 100%; box-sizing: border-box; text-align: center; }
       .toc-months { gap: 6px; }
       .toc-chip { padding: 6px 10px; }
       .toc-exercises { columns: 1; }
+      .toc-workout { margin-left: 0; }
+      .toc-exercises { margin-left: 0; }
       .intro { font-size: 14px; }
+      .workout-panel { margin: 10px 0 14px; border-radius: 10px; }
+      .workout-panel > summary { min-height: 48px; padding: 12px; }
+      .workout-summary-title { font-size: 16px; }
+      .workout-summary-count { font-size: 12px; }
+      .workout-panel .intro { margin: 10px 12px; }
+      .workout-panel table { width: 100%; margin: 0 0 12px; }
       table, thead, tbody, tr, th, td { display: block; }
       table { border: 0; margin: 10px 0 22px; font-size: 14px; }
       thead { display: none; }
-      tr { border: 1px solid #d8dee4; border-radius: 8px; margin: 0 0 12px; background: #ffffff; overflow: hidden; box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06); }
+      tr { border: 1px solid #d8dee4; border-radius: 10px; margin: 0 12px 12px; background: #ffffff; overflow: hidden; box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06); }
       td { display: grid; grid-template-columns: minmax(104px, 34%) minmax(0, 1fr); gap: 8px; border: 0; border-bottom: 1px solid #edf0f3; padding: 9px 10px; white-space: normal; overflow-wrap: anywhere; }
       td:last-child { border-bottom: 0; }
-      td::before { font-weight: 700; color: #4b5563; }
-      td:nth-child(1) { display: block; background: #f3f4f6; font-weight: 700; }
+      td::before { content: attr(data-label); font-weight: 700; color: #4b5563; }
+      td.empty-field { display: none; }
+      td:nth-child(1) { display: block; background: #f3f4f6; font-weight: 700; color: #4b5563; }
       td:nth-child(1)::before { content: "Упражнение # "; }
-      td:nth-child(2)::before { content: "Название"; }
-      td:nth-child(3)::before { content: "Заметка"; }
-      td:nth-child(4)::before { content: "Подход"; }
-      td:nth-child(5)::before { content: "Повтор"; }
-      td:nth-child(6)::before { content: "Нагрузка"; }
-      td:nth-child(7)::before { content: "Отдых"; }
-      td:nth-child(8)::before { content: "Рабочий вес"; }
-      td:nth-child(9)::before { content: "Видео"; }
-      td a { overflow-wrap: anywhere; }
+      td:nth-child(2) { display: block; font-size: 16px; font-weight: 750; background: #fbfcfe; }
+      td:nth-child(2)::before { content: ""; display: none; }
+      td:nth-child(9) a { display: inline-block; margin: 0 6px 6px 0; padding: 5px 8px; border: 1px solid #d8dee4; border-radius: 999px; background: #f6f8fa; overflow-wrap: anywhere; }
       .back-to-top { right: 12px; bottom: 12px; padding: 8px 10px; }
     }
   </style>
@@ -4723,16 +4734,39 @@
           workoutIndex += 1;
           const workoutTitle = normalize(workoutHeading.textContent || `Тренировка №${workoutIndex}`);
           const workoutId = `${monthId}-workout-${workoutIndex}`;
-          workoutHeading.id = workoutId;
+          const table = workoutHeading.nextElementSibling?.matches?.("p.intro")
+            ? workoutHeading.nextElementSibling.nextElementSibling
+            : workoutHeading.nextElementSibling;
+          const rows = table?.matches?.("table") ? table.querySelectorAll("tbody tr") : [];
+          const labels = table?.matches?.("table")
+            ? [...table.querySelectorAll("thead th")].map((cell) => normalize(cell.textContent))
+            : [];
+
+          const workoutPanel = document.createElement("details");
+          workoutPanel.className = "workout-panel";
+          workoutPanel.id = workoutId;
+          workoutPanel.open = !window.matchMedia("(max-width: 760px)").matches;
+
+          const summary = document.createElement("summary");
+          const summaryTitle = document.createElement("span");
+          summaryTitle.className = "workout-summary-title";
+          summaryTitle.textContent = workoutTitle;
+          const summaryCount = document.createElement("span");
+          summaryCount.className = "workout-summary-count";
+          summaryCount.textContent = rows.length ? `${rows.length} упражн.` : "";
+          summary.append(summaryTitle, summaryCount);
+
+          workoutHeading.replaceWith(workoutPanel);
+          workoutPanel.appendChild(summary);
+
+          const intro = workoutPanel.nextElementSibling?.matches?.("p.intro") ? workoutPanel.nextElementSibling : null;
+          if (intro) workoutPanel.appendChild(intro);
+          if (table?.matches?.("table")) workoutPanel.appendChild(table);
 
           const workoutBlock = document.createElement("div");
           workoutBlock.className = "toc-workout";
           workoutBlock.appendChild(makeLink(`#${workoutId}`, workoutTitle));
 
-          const table = workoutHeading.nextElementSibling?.matches?.("p.intro")
-            ? workoutHeading.nextElementSibling.nextElementSibling
-            : workoutHeading.nextElementSibling;
-          const rows = table?.matches?.("table") ? table.querySelectorAll("tbody tr") : [];
           if (rows.length) {
             const exerciseList = document.createElement("ol");
             exerciseList.className = "toc-exercises";
@@ -4742,6 +4776,10 @@
               const exerciseTitle = normalize(cells[1]?.textContent || `Упражнение ${rowIndex + 1}`);
               const exerciseId = `${workoutId}-exercise-${rowIndex + 1}`;
               row.id = exerciseId;
+              cells.forEach((cell, cellIndex) => {
+                cell.dataset.label = labels[cellIndex] || "";
+                cell.classList.toggle("empty-field", !normalize(cell.textContent));
+              });
 
               const item = document.createElement("li");
               item.appendChild(makeLink(`#${exerciseId}`, `${exerciseNumber}. ${exerciseTitle}`));
@@ -4755,6 +4793,25 @@
 
         fullList.appendChild(monthBlock);
       });
+
+      const openTargetPanel = () => {
+        if (!window.location.hash) return;
+        const target = document.querySelector(decodeURIComponent(window.location.hash));
+        const panel = target?.closest?.(".workout-panel");
+        if (panel) panel.open = true;
+        if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      };
+
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest?.("a[href^='#']");
+        if (!link) return;
+        const target = document.querySelector(decodeURIComponent(link.hash));
+        const panel = target?.closest?.(".workout-panel");
+        if (panel) panel.open = true;
+      });
+
+      window.addEventListener("hashchange", openTargetPanel);
+      openTargetPanel();
     })();
   </script>
 </body>
