@@ -38,6 +38,9 @@
     .workout-summary-count { flex: 0 0 auto; color: #4b5563; font-size: 13px; font-weight: 600; }
     .workout-panel .intro { margin: 14px; }
     .workout-panel table { width: calc(100% - 28px); margin: 12px 14px 18px; }
+    .intro-panel { margin: 12px 14px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fbfcfe; }
+    .intro-panel > summary { padding: 10px 12px; }
+    .intro-panel .intro { margin: 0; padding: 0 12px 12px; }
     .back-to-top { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: inline-block; padding: 9px 12px; border: 1px solid #9aa4b2; border-radius: 999px; background: #ffffff; color: #0969da; text-decoration: none; box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14); }
     .back-to-top:hover { text-decoration: underline; }
     @media (max-width: 760px) {
@@ -60,19 +63,25 @@
       .workout-summary-count { font-size: 12px; }
       .workout-panel .intro { margin: 10px 12px; }
       .workout-panel table { width: 100%; margin: 0 0 12px; }
+      .intro-panel { margin: 10px 12px; }
+      .intro-panel > summary { min-height: 42px; box-sizing: border-box; }
+      .intro-panel .intro { max-height: 52vh; overflow: auto; font-size: 14px; }
       table, thead, tbody, tr, th, td { display: block; }
       table { border: 0; margin: 10px 0 22px; font-size: 14px; }
       thead { display: none; }
-      tr { border: 1px solid #d8dee4; border-radius: 10px; margin: 0 12px 12px; background: #ffffff; overflow: hidden; box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06); }
-      td { display: grid; grid-template-columns: minmax(104px, 34%) minmax(0, 1fr); gap: 8px; border: 0; border-bottom: 1px solid #edf0f3; padding: 9px 10px; white-space: normal; overflow-wrap: anywhere; }
-      td:last-child { border-bottom: 0; }
-      td::before { content: attr(data-label); font-weight: 700; color: #4b5563; }
+      tbody tr { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; border: 1px solid #d8dee4; border-radius: 12px; margin: 0 12px 12px; padding: 10px; background: #ffffff; overflow: hidden; box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06); }
+      td { border: 0; padding: 8px; white-space: normal; overflow-wrap: anywhere; border-radius: 8px; background: #f8fafc; }
+      td::before { content: attr(data-label); display: block; margin-bottom: 3px; font-size: 11px; line-height: 1.2; font-weight: 750; color: #5f6b7a; text-transform: uppercase; letter-spacing: 0.02em; }
       td.empty-field { display: none; }
-      td:nth-child(1) { display: block; background: #f3f4f6; font-weight: 700; color: #4b5563; }
-      td:nth-child(1)::before { content: "Упражнение # "; }
-      td:nth-child(2) { display: block; font-size: 16px; font-weight: 750; background: #fbfcfe; }
+      td:nth-child(1) { position: absolute; top: 10px; right: 10px; padding: 3px 8px; border-radius: 999px; background: #eef2f7; font-size: 12px; font-weight: 750; color: #4b5563; }
+      td:nth-child(1)::before { content: "#"; display: inline; margin: 0 2px 0 0; font-size: 12px; text-transform: none; letter-spacing: 0; }
+      td:nth-child(2) { grid-column: 1 / -1; padding: 4px 54px 8px 0; font-size: 16px; line-height: 1.25; font-weight: 800; background: transparent; }
       td:nth-child(2)::before { content: ""; display: none; }
-      td:nth-child(9) a { display: inline-block; margin: 0 6px 6px 0; padding: 5px 8px; border: 1px solid #d8dee4; border-radius: 999px; background: #f6f8fa; overflow-wrap: anywhere; }
+      td:nth-child(3) { grid-column: 1 / -1; background: #fff7ed; color: #7c2d12; }
+      td:nth-child(9) { grid-column: 1 / -1; background: #ffffff; padding: 0; }
+      td:nth-child(9)::before { padding: 8px 8px 0; }
+      td:nth-child(9) a { display: inline-block; margin: 6px 0 0 6px; padding: 7px 10px; border: 1px solid #d8dee4; border-radius: 999px; background: #f6f8fa; overflow-wrap: anywhere; }
+      td:nth-child(9) br { display: none; }
       .back-to-top { right: 12px; bottom: 12px; padding: 8px 10px; }
     }
   </style>
@@ -4760,7 +4769,16 @@
           workoutPanel.appendChild(summary);
 
           const intro = workoutPanel.nextElementSibling?.matches?.("p.intro") ? workoutPanel.nextElementSibling : null;
-          if (intro) workoutPanel.appendChild(intro);
+          if (intro) {
+            const introPanel = document.createElement("details");
+            introPanel.className = "intro-panel";
+            introPanel.open = !window.matchMedia("(max-width: 760px)").matches;
+            const introSummary = document.createElement("summary");
+            introSummary.textContent = "Описание тренировки";
+            introPanel.appendChild(introSummary);
+            introPanel.appendChild(intro);
+            workoutPanel.appendChild(introPanel);
+          }
           if (table?.matches?.("table")) workoutPanel.appendChild(table);
 
           const workoutBlock = document.createElement("div");
@@ -4778,6 +4796,7 @@
               row.id = exerciseId;
               cells.forEach((cell, cellIndex) => {
                 cell.dataset.label = labels[cellIndex] || "";
+                cell.classList.add(`exercise-cell-${cellIndex + 1}`);
                 cell.classList.toggle("empty-field", !normalize(cell.textContent));
               });
 
