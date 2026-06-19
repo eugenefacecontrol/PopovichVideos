@@ -1,22 +1,171 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta target="_blank" rel="noopener noreferrer" charset="utf-8">
-  <title>Aminova target="_blank" rel="noopener noreferrer" Fit training protocol</title>
+  <meta charset="utf-8">
+  <title>Aminova Fit: тренировочный протокол</title>
   <style>
+    html { scroll-behavior: smooth; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.45; padding: 24px; color: #1f2933; }
-    h1, h2, h3 { line-height: 1.2; }
+    h1, h2, h3 { line-height: 1.2; scroll-margin-top: 18px; }
+    tr { scroll-margin-top: 18px; }
     table { border-collapse: collapse; width: 100%; margin: 12px 0 28px; font-size: 13px; }
     th, td { border: 1px solid #d8dee4; padding: 7px 8px; vertical-align: top; }
     th { background: #f3f4f6; text-align: left; }
     .intro { white-space: pre-line; color: #4b5563; }
     .error { color: #b42318; }
+    .guide, .toc { border: 1px solid #d8dee4; border-radius: 8px; padding: 16px; margin: 18px 0; background: #fbfcfe; }
+    .guide h2, .toc h2 { margin: 0 0 8px; }
+    .guide-preview, .toc-note { margin: 0 0 12px; color: #4b5563; }
+    details > summary { cursor: pointer; font-weight: 700; color: #111827; }
+    .guide details > summary, .toc details > summary { display: inline-block; padding: 7px 12px; border: 1px solid #9aa4b2; border-radius: 6px; background: #ffffff; }
+    .guide-content { margin-top: 14px; }
+    .guide-content h3 { margin: 18px 0 8px; }
+    .guide-content ul { margin: 6px 0 12px 22px; padding: 0; }
+    .toc-months, .toc-full { display: flex; flex-wrap: wrap; gap: 8px; }
+    .toc-full { display: block; margin-top: 14px; }
+    .toc a { color: #0969da; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .toc-chip { display: inline-block; border: 1px solid #d8dee4; border-radius: 999px; padding: 4px 10px; background: #ffffff; }
+    .toc-month-block { margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb; }
+    .toc-month-block:last-child { border-bottom: 0; }
+    .toc-workout { margin: 8px 0 0 18px; }
+    .toc-exercises { columns: 2; margin: 6px 0 0 18px; padding-left: 18px; }
+    .toc-exercises li { break-inside: avoid; margin-bottom: 4px; }
+    .back-to-top { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: inline-block; padding: 9px 12px; border: 1px solid #9aa4b2; border-radius: 999px; background: #ffffff; color: #0969da; text-decoration: none; box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14); }
+    .back-to-top:hover { text-decoration: underline; }
+    @media (max-width: 760px) {
+      body { padding: 12px; font-size: 15px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 20px; }
+      h3 { font-size: 18px; }
+      .guide, .toc { padding: 12px; margin: 14px 0; }
+      .guide details > summary, .toc details > summary { width: 100%; box-sizing: border-box; text-align: center; }
+      .toc-months { gap: 6px; }
+      .toc-chip { padding: 6px 10px; }
+      .toc-exercises { columns: 1; }
+      .intro { font-size: 14px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      table { border: 0; margin: 10px 0 22px; font-size: 14px; }
+      thead { display: none; }
+      tr { border: 1px solid #d8dee4; border-radius: 8px; margin: 0 0 12px; background: #ffffff; overflow: hidden; box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06); }
+      td { display: grid; grid-template-columns: minmax(104px, 34%) minmax(0, 1fr); gap: 8px; border: 0; border-bottom: 1px solid #edf0f3; padding: 9px 10px; white-space: normal; overflow-wrap: anywhere; }
+      td:last-child { border-bottom: 0; }
+      td::before { font-weight: 700; color: #4b5563; }
+      td:nth-child(1) { display: block; background: #f3f4f6; font-weight: 700; }
+      td:nth-child(1)::before { content: "Упражнение # "; }
+      td:nth-child(2)::before { content: "Название"; }
+      td:nth-child(3)::before { content: "Заметка"; }
+      td:nth-child(4)::before { content: "Подход"; }
+      td:nth-child(5)::before { content: "Повтор"; }
+      td:nth-child(6)::before { content: "Нагрузка"; }
+      td:nth-child(7)::before { content: "Отдых"; }
+      td:nth-child(8)::before { content: "Рабочий вес"; }
+      td:nth-child(9)::before { content: "Видео"; }
+      td a { overflow-wrap: anywhere; }
+      .back-to-top { right: 12px; bottom: 12px; padding: 8px 10px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Aminova target="_blank" rel="noopener noreferrer" Fit training protocol</h1>
+  <h1 id="top">Aminova Fit: тренировочный протокол</h1>
   <p>Collected: 2026-06-19T10:01:05.644Z<br>Page: https://aminovafit.com/account/?user=3120&amp;tab=trainingprotocol</p>
   <p>8 month(s), 30 workout(s), 297 exercise row(s), 105 note(s), 297 row(s) with video links.</p>
+
+  <section class="guide" aria-labelledby="guide-title">
+    <h2 id="guide-title">Рекомендации</h2>
+    <p class="guide-preview">Курс рассчитан на повторение месячного протокола: распределяйте 3-4 силовые тренировки по неделе с днями отдыха между ними и постепенно повышайте рабочие веса.</p>
+    <details>
+      <summary>Развернуть рекомендации</summary>
+      <div class="guide-content">
+        <h3>Формат и продолжительность</h3>
+        <ul>
+          <li>Данные тренировки рассчитаны на всё время работы на курсе.</li>
+          <li>Одна ссылка содержит тренировочный протокол на 1 месяц, то есть 4 недели.</li>
+          <li>В силовых тренировках на одну тренировочную неделю обычно 3 или 4 тренировки. Распределяйте их по неделе с обязательными днями отдыха между силовыми.</li>
+        </ul>
+
+        <h3>Пример тренировочной недели: 3 силовые</h3>
+        <ul>
+          <li>Пн - Тренировка 1</li>
+          <li>Вт - Умный фитнес</li>
+          <li>Ср - Тренировка 2</li>
+          <li>Чт - Умный фитнес</li>
+          <li>Пт - Тренировка 3</li>
+          <li>Сб, Вс - Умный фитнес</li>
+        </ul>
+
+        <h3>Пример тренировочной недели: 4 силовые</h3>
+        <ul>
+          <li>Пн - Тренировка 1</li>
+          <li>Вт - Умный фитнес</li>
+          <li>Ср - Тренировка 2</li>
+          <li>Чт - Умный фитнес</li>
+          <li>Пт - Тренировка 3</li>
+          <li>Сб - Умный фитнес</li>
+          <li>Вс - Тренировка 4</li>
+        </ul>
+
+        <p>Можно придерживаться недельного цикла или тренироваться через день, без привязки к неделе. После окончания недели возвращайтесь к тренировке №1: мышечные группы не пересекаются.</p>
+
+        <h3>Повторение и прогресс</h3>
+        <ul>
+          <li>Повторяйте данную схему в течение месяца.</li>
+          <li>Постепенно увеличивайте рабочие веса и нагрузку.</li>
+          <li>Техника выполнения упражнений одинакова вне зависимости от места занятий: зал или дом.</li>
+        </ul>
+
+        <h3>Адаптация упражнений для домашних условий</h3>
+        <ul>
+          <li>Отведение/разгибание бедра в кроссовере: используйте утяжелители, резинку за устойчивую опору или круговую резинку на щиколотках.</li>
+          <li>Приседания со штангой: можно выполнять с гантелями, бодибаром, гирей или любым доступным отягощением.</li>
+          <li>Жим от груди и разведения с гантелями: можно выполнять лёжа на коврике с бодибаром, штангой или гантелями.</li>
+          <li>Пуловер: можно выполнять лёжа на полу до касания гантелью пола.</li>
+          <li>Зашагивание на платформу: используйте стул, лестничную ступеньку или достаточно устойчивый диван.</li>
+          <li>Сплит-приседания: выполняйте как обычные выпады с гантелями в руках.</li>
+          <li>Мост: выполняйте с кровати, дивана или устойчивой опоры высотой до колена. Если опоры нет, работайте лёжа на полу.</li>
+          <li>Махи на заднюю дельту: можно выполнять без скамьи, сидя или стоя в наклоне, с корпусом почти параллельно полу.</li>
+        </ul>
+
+        <h3>Инвентарь для домашних тренировок</h3>
+        <ul>
+          <li>Коврик.</li>
+          <li>Набор резинок разного сопротивления: от 5-6 кг до 16-18 кг.</li>
+          <li>Разборные гантели.</li>
+          <li>В качестве скамьи можно использовать диван, стул, стол или опору о стену.</li>
+        </ul>
+
+        <h3>Рабочие веса и прогрессия</h3>
+        <ul>
+          <li>Начинайте с тех весов, с которыми работали до курса.</li>
+          <li>Если подход выполнен без утомления на последних 2-3 повторениях, увеличьте вес.</li>
+          <li>Вес подбирается так, чтобы последние 2-3 повторения давались тяжело, близко к отказу.</li>
+          <li>Выполняйте упражнения в медленном, подконтрольном темпе.</li>
+          <li>Если доступен только лёгкий вес, сделайте дополнительный подход или увеличьте количество повторений.</li>
+        </ul>
+
+        <h3>Обозначения</h3>
+        <p>SET - два упражнения, выполняемые без отдыха между ними.</p>
+
+        <h3>Техника и безопасность</h3>
+        <ul>
+          <li>Следите за нейтральным положением позвоночника и симметрией движений.</li>
+          <li>Избегайте округления спины или чрезмерных прогибов в пояснице.</li>
+          <li>Увеличивайте вес только при соблюдении всех технических аспектов.</li>
+          <li>Работайте в комфортной амплитуде, никогда не через боль.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <nav class="toc" aria-labelledby="toc-title">
+    <h2 id="toc-title">Содержание</h2>
+    <p class="toc-note">Быстрые ссылки на месяцы видны сразу. Разверните список, чтобы перейти к конкретной тренировке или упражнению.</p>
+    <div id="toc-months" class="toc-months"></div>
+    <details>
+      <summary>Развернуть список тренировок и упражнений</summary>
+      <div id="toc-full" class="toc-full"></div>
+    </details>
+  </nav>
   
       <section>
         <h2>Месяц 1</h2>
@@ -51,7 +200,7 @@
 
 Контроль дыхания = лучшая координация, концентрация и техника.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -239,7 +388,7 @@
 
 Разминка — залог безопасности, эффективности и устойчивого результата. Не пропускайте её — это основа каждой успешной тренировки.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -414,7 +563,7 @@
 ➡️Если дома только один вес и он лёгкий —
 добавьте подход или увеличьте количество повторений.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -526,7 +675,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -703,7 +852,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -866,7 +1015,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -992,7 +1141,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -1155,7 +1304,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -1304,7 +1453,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -1425,7 +1574,7 @@
           <h3>Тренировка №4</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -1579,7 +1728,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -1742,7 +1891,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -1891,7 +2040,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2012,7 +2161,7 @@
           <h3>Тренировка №4</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2166,7 +2315,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2329,7 +2478,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2478,7 +2627,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2599,7 +2748,7 @@
           <h3>Тренировка №4</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2753,7 +2902,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -2902,7 +3051,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3065,7 +3214,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3200,7 +3349,7 @@
           <h3>Тренировка №4</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3354,7 +3503,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3489,7 +3638,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3666,7 +3815,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3801,7 +3950,7 @@
           <h3>Тренировка №4</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -3955,7 +4104,7 @@
           <h3>Тренировка №1</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -4118,7 +4267,7 @@
           <h3>Тренировка №2</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -4267,7 +4416,7 @@
           <h3>Тренировка №3</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -4388,7 +4537,7 @@
           <h3>Тренировка №4</h3>
           <p class="intro">Давайте погрузимся в ваш план тренировок. Мы сосредоточимся на сочетании силовых тренировок, кардиотренировок и упражнений на гибкость, чтобы помочь вам достичь ваших целей по снижению веса.</p>
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
+            <thead><tr><th>#</th><th>Название упражнения</th><th>Заметка</th><th>Подход</th><th>Повтор</th><th>Уровень нагрузки</th><th>Время отдыха между подходами</th><th>Рабочий вес</th><th>Ссылки на видео</th></tr></thead>
             <tbody>
               <tr>
                   <td>1</td>
@@ -4536,5 +4685,77 @@
         
       </section>
     
+  <a class="back-to-top" href="#top" aria-label="Вернуться наверх">Наверх</a>
+
+  <script>
+    (() => {
+      const makeLink = (href, text, className) => {
+        const a = document.createElement("a");
+        a.href = href;
+        a.textContent = text;
+        if (className) a.className = className;
+        return a;
+      };
+
+      const normalize = (value) => value.replace(/\s+/g, " ").trim();
+      const monthLinks = document.querySelector("#toc-months");
+      const fullList = document.querySelector("#toc-full");
+      if (!monthLinks || !fullList) return;
+
+      document.querySelectorAll("body > section:not(.guide)").forEach((monthSection, monthIndex) => {
+        const monthNumber = monthIndex + 1;
+        const monthTitle = normalize(monthSection.querySelector("h2")?.textContent || `Месяц ${monthNumber}`);
+        const monthId = `month-${monthNumber}`;
+        monthSection.id = monthId;
+        const monthHeading = monthSection.querySelector("h2");
+        if (monthHeading) monthHeading.id = `${monthId}-title`;
+
+        monthLinks.appendChild(makeLink(`#${monthId}`, monthTitle, "toc-chip"));
+
+        const monthBlock = document.createElement("div");
+        monthBlock.className = "toc-month-block";
+        const monthHeader = document.createElement("h3");
+        monthHeader.appendChild(makeLink(`#${monthId}`, monthTitle));
+        monthBlock.appendChild(monthHeader);
+
+        let workoutIndex = 0;
+        monthSection.querySelectorAll("h3").forEach((workoutHeading) => {
+          workoutIndex += 1;
+          const workoutTitle = normalize(workoutHeading.textContent || `Тренировка №${workoutIndex}`);
+          const workoutId = `${monthId}-workout-${workoutIndex}`;
+          workoutHeading.id = workoutId;
+
+          const workoutBlock = document.createElement("div");
+          workoutBlock.className = "toc-workout";
+          workoutBlock.appendChild(makeLink(`#${workoutId}`, workoutTitle));
+
+          const table = workoutHeading.nextElementSibling?.matches?.("p.intro")
+            ? workoutHeading.nextElementSibling.nextElementSibling
+            : workoutHeading.nextElementSibling;
+          const rows = table?.matches?.("table") ? table.querySelectorAll("tbody tr") : [];
+          if (rows.length) {
+            const exerciseList = document.createElement("ol");
+            exerciseList.className = "toc-exercises";
+            rows.forEach((row, rowIndex) => {
+              const cells = row.querySelectorAll("td");
+              const exerciseNumber = normalize(cells[0]?.textContent || String(rowIndex + 1));
+              const exerciseTitle = normalize(cells[1]?.textContent || `Упражнение ${rowIndex + 1}`);
+              const exerciseId = `${workoutId}-exercise-${rowIndex + 1}`;
+              row.id = exerciseId;
+
+              const item = document.createElement("li");
+              item.appendChild(makeLink(`#${exerciseId}`, `${exerciseNumber}. ${exerciseTitle}`));
+              exerciseList.appendChild(item);
+            });
+            workoutBlock.appendChild(exerciseList);
+          }
+
+          monthBlock.appendChild(workoutBlock);
+        });
+
+        fullList.appendChild(monthBlock);
+      });
+    })();
+  </script>
 </body>
 </html>
