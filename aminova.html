@@ -41,6 +41,16 @@
     .intro-panel { margin: 12px 14px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fbfcfe; }
     .intro-panel > summary { padding: 10px 12px; }
     .intro-panel .intro { margin: 0; padding: 0 12px 12px; }
+    section:target > h2,
+    section.current-target > h2,
+    .workout-panel:target > summary,
+    .workout-panel.current-target > summary,
+    tbody tr:target,
+    tbody tr.current-target { outline: 3px solid #22c55e; background: #ecfdf3; box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.16); }
+    tbody tr:target td,
+    tbody tr.current-target td { background-color: #f0fdf4; }
+    tbody tr:target td:nth-child(3),
+    tbody tr.current-target td:nth-child(3) { background-color: #dcfce7; color: #14532d; }
     .back-to-top { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: inline-block; padding: 9px 12px; border: 1px solid #9aa4b2; border-radius: 999px; background: #ffffff; color: #0969da; text-decoration: none; box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14); }
     .back-to-top:hover { text-decoration: underline; }
     @media (max-width: 760px) {
@@ -4813,11 +4823,19 @@
         fullList.appendChild(monthBlock);
       });
 
+      let highlightedTarget = null;
+      const setHighlightedTarget = (target) => {
+        highlightedTarget?.classList?.remove("current-target");
+        highlightedTarget = target || null;
+        highlightedTarget?.classList?.add("current-target");
+      };
+
       const openTargetPanel = () => {
         if (!window.location.hash) return;
         const target = document.querySelector(decodeURIComponent(window.location.hash));
         const panel = target?.closest?.(".workout-panel");
         if (panel) panel.open = true;
+        setHighlightedTarget(target);
         if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
       };
 
@@ -4827,6 +4845,7 @@
         const target = document.querySelector(decodeURIComponent(link.hash));
         const panel = target?.closest?.(".workout-panel");
         if (panel) panel.open = true;
+        setHighlightedTarget(target);
       });
 
       window.addEventListener("hashchange", openTargetPanel);
