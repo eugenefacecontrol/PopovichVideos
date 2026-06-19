@@ -2,7 +2,7 @@
 // @name Aminova Fit - collect training protocol videos
 // @description Collects Aminova Fit training protocol months, exercises, notes, article links, and embedded video URLs (Alt+C/Alt+A/Alt+V)
 // @namespace http://tampermonkey.net/
-// @version 2026-06-19
+// @version 2026-06-19.2
 // @author You
 // @match https://aminovafit.com/account/*
 // @match https://www.aminovafit.com/account/*
@@ -195,14 +195,16 @@
     console.warn('Timed out waiting for month change; collecting current DOM anyway', option);
   }
 
-  async function collectAllMonths() {
+  async function collectAllMonths(onProgress) {
     const options = getMonthOptions();
     if (!options.length) return [collectCurrentMonth()];
 
     const originalIndex = options.find((option) => option.selected)?.index ?? document.querySelector(MONTH_SELECT).selectedIndex;
     const months = [];
 
-    for (const option of options) {
+    for (let index = 0; index < options.length; index++) {
+      const option = options[index];
+      onProgress?.(`Months: ${index + 1}/${options.length} — ${option.label}`, index + 1, options.length);
       await selectMonth(option);
       months.push(collectCurrentMonth(option));
     }
@@ -246,9 +248,20 @@
     };
   }
 
+  function getVideoUrls(video) {
+    if (!video) return [];
+    return uniq([
+      ...(video.mediaUrls || []),
+      ...(video.iframeSrcs || []),
+      ...(video.directFileUrls || [])
+    ]);
+  }
+
   function extractVideoInfoFromHtml(html, articleUrl) {
     const doc = new DOMParser().parseFromString(html, 'text/html');
     const title = textOf(doc.querySelector('.knowledgelibrary-article_title, h1, .entry-title'));
+    const activeArticleIframeUrls = Array.from(doc.querySelectorAll('div.knowledgelibrary-article.active > div > iframe[src], .knowledgelibrary-article.active iframe[src]'))
+      .map((iframe) => iframe.getAttribute('src'));
     const iframeUrls = Array.from(doc.querySelectorAll('iframe[src]')).map((iframe) => iframe.getAttribute('src'));
     const videoUrls = Array.from(doc.querySelectorAll('video[src], video source[src], source[src]')).map((node) => node.getAttribute('src'));
     const rawUrls = extractUrlsFromText(html);
@@ -256,10 +269,16 @@
       /iframe\.mediadelivery\.net|playercdn\.cdnvideo\.ru|direct_file=|\.(m3u8|mp4)(?:[/?#]|$)/i.test(url)
     ));
 
-    const classified = classifyVideoUrls([...iframeUrls, ...videoUrls, ...interestingRawUrls]);
+    const classified = classifyVideoUrls([...activeArticleIframeUrls, ...iframeUrls, ...videoUrls, ...interestingRawUrls]);
     return {
       articleUrl,
       articleTitle: title || null,
+      extraction: {
+        activeArticleIframeCount: activeArticleIframeUrls.length,
+        iframeCount: iframeUrls.length,
+        videoSourceCount: videoUrls.length,
+        rawInterestingUrlCount: interestingRawUrls.length
+      },
       ...classified,
       found: Boolean(classified.iframeSrcs.length || classified.mediaUrls.length || classified.directFileUrls.length)
     };
@@ -290,7 +309,7 @@
 
     for (let index = 0; index < items.length; index++) {
       const { item } = items[index];
-      onProgress?.(`Article videos: ${index + 1}/${items.length} — ${item.title}`);
+      onProgress?.(`Video pages: ${index + 1}/${items.length} — ${item.title}`, index + 1, items.length);
 
       if (seen.has(item.articleUrl)) {
         item.video = seen.get(item.articleUrl);
@@ -320,7 +339,7 @@
 
   function buildData(months, options = {}) {
     const data = {
-      schema: 'aminova.trainingprotocol.v1',
+      schema: 'aminova.trainingprotocol.v2',
       source: {
         pageUrl: window.location.href,
         userId: getCurrentUserId(),
@@ -334,6 +353,7 @@
 
     const items = getAllItems(data);
     data.flatVideos = items.map(({ month, workout, item }) => ({
+      id: [month.value || month.label, workout.index, item.index, item.articleId || item.trainingId].filter(Boolean).join(':'),
       month: month.label,
       monthValue: month.value,
       workout: workout.title,
@@ -341,13 +361,15 @@
       exerciseIndex: item.index,
       title: item.title,
       articleId: item.articleId,
-      articleUrl: item.articleUrl,
+      sourceArticleUrl: item.articleUrl,
       note: item.note,
       sets: item.sets,
       reps: item.reps,
       workload: item.workload,
       restBetweenSets: item.restBetweenSets,
       workingWeight: item.workingWeight,
+      videoUrl: getVideoUrls(item.video)[0] || null,
+      videoUrls: getVideoUrls(item.video),
       iframeSrcs: item.video?.iframeSrcs || [],
       mediaUrls: item.video?.mediaUrls || [],
       directFileUrls: item.video?.directFileUrls || [],
@@ -361,8 +383,10 @@
       exercises: items.length,
       exercisesWithNotes: items.filter(({ item }) => item.note).length,
       articleLinks: items.filter(({ item }) => item.articleUrl).length,
+      exercisesWithVideoLinks: data.flatVideos.filter((item) => item.videoUrls.length).length,
       exercisesWithVideoEmbeds: data.flatVideos.filter((item) => item.iframeSrcs.length || item.mediaUrls.length || item.directFileUrls.length).length,
-      uniqueArticleLinks: new Set(items.map(({ item }) => item.articleUrl).filter(Boolean)).size
+      uniqueArticleLinks: new Set(items.map(({ item }) => item.articleUrl).filter(Boolean)).size,
+      uniqueVideoLinks: new Set(data.flatVideos.flatMap((item) => item.videoUrls)).size
     };
 
     return data;
@@ -375,7 +399,7 @@
     lines.push(`Collected: ${data.source.collectedAt}`);
     lines.push(`Page: ${data.source.pageUrl}`);
     lines.push('');
-    lines.push(`Summary: ${data.summary.months} month(s), ${data.summary.workouts} workout(s), ${data.summary.exercises} exercise row(s), ${data.summary.exercisesWithNotes} note(s), ${data.summary.exercisesWithVideoEmbeds} row(s) with extracted video embeds/media.`);
+    lines.push(`Summary: ${data.summary.months} month(s), ${data.summary.workouts} workout(s), ${data.summary.exercises} exercise row(s), ${data.summary.exercisesWithNotes} note(s), ${data.summary.exercisesWithVideoLinks} row(s) with extracted video links.`);
     lines.push('');
 
     if (data.recommendations.length) {
@@ -413,14 +437,10 @@
 
           lines.push(`- ${item.index}. ${item.title}${parts.length ? ` — ${parts.join(', ')}` : ''}`);
           if (item.note) lines.push(`  Note: ${item.note}`);
-          if (item.articleUrl) lines.push(`  Article: ${item.articleUrl}`);
 
-          const urls = uniq([
-            ...(item.video?.iframeSrcs || []),
-            ...(item.video?.mediaUrls || []),
-            ...(item.video?.directFileUrls || [])
-          ]);
+          const urls = getVideoUrls(item.video);
           for (const url of urls) lines.push(`  Video: ${url}`);
+          if (!urls.length && item.articleUrl) lines.push(`  Source article: ${item.articleUrl}`);
           if (item.video?.error) lines.push(`  Video fetch error: ${item.video.error}`);
         }
         lines.push('');
@@ -448,14 +468,10 @@
           <h3>${escapeHtml(workout.title)}</h3>
           ${workout.intro ? `<p class="intro">${escapeHtml(workout.intro)}</p>` : ''}
           <table>
-            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Links</th></tr></thead>
+            <thead><tr><th>#</th><th>Exercise</th><th>Note</th><th>Sets</th><th>Reps</th><th>Load</th><th>Rest</th><th>Weights</th><th>Video links</th></tr></thead>
             <tbody>
               ${workout.items.map((item) => {
-                const videoUrls = uniq([
-                  ...(item.video?.iframeSrcs || []),
-                  ...(item.video?.mediaUrls || []),
-                  ...(item.video?.directFileUrls || [])
-                ]);
+                const videoUrls = getVideoUrls(item.video);
                 return `<tr>
                   <td>${item.index}</td>
                   <td>${escapeHtml(item.title)}</td>
@@ -466,8 +482,8 @@
                   <td>${escapeHtml(item.restBetweenSets)}</td>
                   <td>${escapeHtml(Object.values(item.workingWeight || {}).filter(Boolean).join(' / '))}</td>
                   <td>
-                    ${item.articleUrl ? `<a href="${escapeHtml(item.articleUrl)}">article</a>` : ''}
-                    ${videoUrls.map((url, idx) => `<br><a href="${escapeHtml(url)}">video ${idx + 1}</a>`).join('')}
+                    ${videoUrls.map((url, idx) => `<a href="${escapeHtml(url)}">video ${idx + 1}</a>`).join('<br>')}
+                    ${!videoUrls.length && item.articleUrl ? `<a href="${escapeHtml(item.articleUrl)}">source article</a>` : ''}
                     ${item.video?.error ? `<br><span class="error">${escapeHtml(item.video.error)}</span>` : ''}
                   </td>
                 </tr>`;
@@ -496,7 +512,7 @@
 <body>
   <h1>Aminova Fit training protocol</h1>
   <p>Collected: ${escapeHtml(data.source.collectedAt)}<br>Page: ${escapeHtml(data.source.pageUrl)}</p>
-  <p>${data.summary.months} month(s), ${data.summary.workouts} workout(s), ${data.summary.exercises} exercise row(s), ${data.summary.exercisesWithNotes} note(s), ${data.summary.exercisesWithVideoEmbeds} row(s) with video embeds/media.</p>
+  <p>${data.summary.months} month(s), ${data.summary.workouts} workout(s), ${data.summary.exercises} exercise row(s), ${data.summary.exercisesWithNotes} note(s), ${data.summary.exercisesWithVideoLinks} row(s) with video links.</p>
   ${sections}
 </body>
 </html>`;
@@ -549,7 +565,7 @@
     header.innerHTML = `
       <div>
         <strong style="font-size:15px;color:#fff;">Aminova Fit protocol</strong>
-        <span style="color:#9ca3af;margin-left:10px;">${data.summary.months} months · ${data.summary.workouts} workouts · ${data.summary.exercises} rows · ${data.summary.exercisesWithVideoEmbeds} video rows</span>
+        <span style="color:#9ca3af;margin-left:10px;">${data.summary.months} months · ${data.summary.workouts} workouts · ${data.summary.exercises} rows · ${data.summary.exercisesWithVideoLinks} video rows</span>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
         <button data-action="json">JSON</button>
@@ -595,15 +611,32 @@
     document.body.appendChild(overlay);
   }
 
-  function setProgress(message) {
+  function setProgress(message, current = null, total = null) {
     let box = document.getElementById('aminova-collector-progress');
     if (!box) {
       box = document.createElement('div');
       box.id = 'aminova-collector-progress';
-      box.style.cssText = 'position:fixed;right:16px;bottom:16px;background:#111827;color:#fff;z-index:999998;border-radius:8px;padding:10px 12px;font:13px system-ui,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,.3);max-width:360px;';
+      box.style.cssText = 'position:fixed;right:16px;bottom:16px;background:#111827;color:#fff;z-index:999998;border-radius:8px;padding:12px 14px;font:13px system-ui,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,.3);width:min(380px,calc(100vw - 32px));';
       document.body.appendChild(box);
     }
-    box.textContent = message;
+
+    const safeCurrent = Number.isFinite(Number(current)) ? Number(current) : null;
+    const safeTotal = Number.isFinite(Number(total)) && Number(total) > 0 ? Number(total) : null;
+    const percent = safeCurrent !== null && safeTotal ? Math.max(0, Math.min(100, Math.round((safeCurrent / safeTotal) * 100))) : null;
+
+    box.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;">
+        <strong style="font-size:13px;">Aminova collector</strong>
+        <span style="color:#d1d5db;font-size:12px;">${percent === null ? '' : `${percent}%`}</span>
+      </div>
+      <div style="color:#f9fafb;line-height:1.35;word-break:break-word;">${escapeHtml(message)}</div>
+      ${safeCurrent !== null && safeTotal ? `
+        <div style="margin-top:10px;height:7px;background:#374151;border-radius:999px;overflow:hidden;">
+          <div style="height:100%;width:${percent}%;background:#22c55e;border-radius:999px;transition:width .2s ease;"></div>
+        </div>
+        <div style="margin-top:6px;color:#9ca3af;font-size:12px;">${safeCurrent} / ${safeTotal}</div>
+      ` : ''}
+    `;
   }
 
   function clearProgress() {
@@ -618,7 +651,7 @@
 
     try {
       setProgress(options.allMonths ? 'Collecting all months...' : 'Collecting current month...');
-      const months = options.allMonths ? await collectAllMonths() : [collectCurrentMonth()];
+      const months = options.allMonths ? await collectAllMonths(setProgress) : [collectCurrentMonth()];
       const data = buildData(months, options);
 
       if (options.fetchArticlePages) {
