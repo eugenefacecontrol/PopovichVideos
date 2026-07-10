@@ -7190,6 +7190,11 @@
 
       document.querySelectorAll(".protocol-view").forEach((view, index) => initializeProtocol(view, index + 1));
 
+      document.querySelectorAll("#protocol-2 a:not([href^='#'])").forEach((link) => {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      });
+
       const protocolSelect = document.querySelector("#protocol-select");
       const showProtocol = (protocolId, scrollToTop = false) => {
         document.querySelectorAll(".protocol-view").forEach((view) => {
