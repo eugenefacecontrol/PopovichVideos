@@ -7200,12 +7200,22 @@
         document.querySelectorAll(".protocol-view").forEach((view) => {
           view.hidden = view.id !== protocolId;
         });
+
+        const url = new URL(window.location.href);
+        url.searchParams.set("training", protocolId === "protocol-2" ? "2" : "1");
         if (scrollToTop) {
-          history.replaceState(null, "", window.location.pathname + window.location.search);
+          url.hash = "";
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
+        history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
       };
       protocolSelect?.addEventListener("change", () => showProtocol(protocolSelect.value, true));
+
+      const initialProtocol = new URLSearchParams(window.location.search).get("training") === "2"
+        ? "protocol-2"
+        : "protocol-1";
+      if (protocolSelect) protocolSelect.value = initialProtocol;
+      showProtocol(initialProtocol);
 
       let highlightedTarget = null;
       const setHighlightedTarget = (target) => {
