@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name Popovich - collect kinescope iframe src
-// @description Collects Kinescope video URLs from PopovichFit course pages (Alt+C)
+// @description Collects Kinescope video URLs from PopovichFit course pages (Alt+C / Alt+X)
 // @namespace http://tampermonkey.net/
-// @version 2026-03-04v3
+// @version 2026-08-17v1
 // @match https://lk.popovichfit.ru/products/*
 // @downloadURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
 // @updateURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
@@ -36,37 +36,58 @@
     return JSON.parse(appEl.dataset.page);
   }
 
+  function getCourseSources(pageData) {
+    const props = pageData.props || {};
+    const sources = [];
+
+    if (Array.isArray(props.product?.courses)) sources.push(...props.product.courses);
+    if (Array.isArray(props.courses)) sources.push(...props.courses);
+    if (props.course) sources.push(props.course);
+    if (Array.isArray(props.advertisedProduct?.courses)) sources.push(...props.advertisedProduct.courses);
+
+    return sources.filter(course => course?.chapters);
+  }
+
+  function getChapterDays(chapter) {
+    if (Array.isArray(chapter)) return chapter;
+    if (chapter && typeof chapter === 'object') return Object.values(chapter);
+    return [];
+  }
+
   // ─── Collect workouts from Тренировки (weeks) ───
   function collectWeekWorkouts(pageData) {
     const results = [];
-    const product = pageData.props.product;
-    if (!product?.courses?.length) return results;
+    const courses = getCourseSources(pageData);
 
-    const course = product.courses[0];
-    const sectionNames = course.section_names || [];
-    const chapters = course.chapters || [];
+    for (const course of courses) {
+      const sectionNames = course.section_names || [];
+      const chapters = course.chapters || [];
+      const courseName = courses.length > 1 ? course.name : null;
 
-    for (let w = 0; w < chapters.length; w++) {
-      const weekName = sectionNames[w] || `Week ${w + 1}`;
-      const days = Array.isArray(chapters[w]) ? chapters[w] : Object.values(chapters[w]);
+      for (let w = 0; w < chapters.length; w++) {
+        const weekName = sectionNames[w] || course.modules?.[w]?.name || `Week ${w + 1}`;
+        const days = getChapterDays(chapters[w]);
 
-      for (const day of days) {
-        for (const workout of (day.workouts || [])) {
-          results.push({
-            week: weekName,
-            weekday: day.weekday,
-            date: day.date,
-            month: day.month,
-            dayOrder: day.dayOrder,
-            title: workout.name,
-            type: workout.type,
-            time: workout.time,
-            iframeSrc: workout.media_url || null,
-            media_type: workout.media_type,
-            tags: workout.tags,
-            inventory: workout.inventory,
-            is_bonus: workout.is_bonus
-          });
+        for (const day of days) {
+          for (const workout of (day.workouts || [])) {
+            results.push({
+              course: courseName,
+              week: weekName,
+              weekday: day.weekday,
+              date: day.date,
+              month: day.month,
+              dayOrder: day.dayOrder,
+              title: workout.name,
+              type: workout.type,
+              time: workout.time,
+              iframeSrc: workout.media_url || null,
+              videoUrl: workout.video_url || null,
+              media_type: workout.media_type,
+              tags: workout.tags,
+              inventory: workout.inventory,
+              is_bonus: workout.is_bonus
+            });
+          }
         }
       }
     }
