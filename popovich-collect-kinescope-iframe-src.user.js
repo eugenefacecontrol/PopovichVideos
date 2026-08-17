@@ -2,7 +2,7 @@
 // @name Popovich - collect kinescope iframe src
 // @description Collects Kinescope video URLs from PopovichFit course pages (Alt+C / Alt+X)
 // @namespace http://tampermonkey.net/
-// @version 2026-08-17v1
+// @version 2026-08-17v2
 // @match https://lk.popovichfit.ru/products/*
 // @downloadURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
 // @updateURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
@@ -33,17 +33,74 @@
   function getPageData() {
     const appEl = document.querySelector('#app');
     if (!appEl || !appEl.dataset.page) return null;
-    return JSON.parse(appEl.dataset.page);
+    const domPageData = JSON.parse(appEl.dataset.page);
+    const historyPageData = window.history?.state?.page;
+
+    if (historyPageData?.props) {
+      return {
+        ...domPageData,
+        ...historyPageData,
+        props: {
+          ...(domPageData.props || {}),
+          ...(historyPageData.props || {})
+        }
+      };
+    }
+
+    return domPageData;
+  }
+
+  function hasUsableProps(pageData, propNames) {
+    const props = pageData.props || {};
+    return propNames.every(propName => props[propName] !== undefined && props[propName] !== null);
+  }
+
+  async function getPageDataWithDeferred(propNames) {
+    const pageData = getPageData();
+    if (!pageData || hasUsableProps(pageData, propNames)) return pageData;
+
+    const availableDeferredProps = Object.values(pageData.deferredProps || {}).flat();
+    const missingDeferredProps = propNames.filter(propName => availableDeferredProps.includes(propName));
+    if (!missingDeferredProps.length) return pageData;
+
+    const response = await fetch(window.location.href, {
+      headers: {
+        Accept: 'text/html, application/xhtml+xml',
+        'X-Inertia': 'true',
+        'X-Inertia-Version': pageData.version || '',
+        'X-Inertia-Partial-Component': pageData.component,
+        'X-Inertia-Partial-Data': missingDeferredProps.join(','),
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      credentials: 'same-origin'
+    });
+
+    if (!response.ok) throw new Error(`Deferred props request failed: ${response.status}`);
+
+    const deferredPageData = await response.json();
+    return {
+      ...pageData,
+      ...deferredPageData,
+      props: {
+        ...(pageData.props || {}),
+        ...(deferredPageData.props || {})
+      }
+    };
+  }
+
+  function asArray(value) {
+    if (Array.isArray(value)) return value;
+    if (value && typeof value === 'object') return Object.values(value);
+    return [];
   }
 
   function getCourseSources(pageData) {
     const props = pageData.props || {};
     const sources = [];
 
-    if (Array.isArray(props.product?.courses)) sources.push(...props.product.courses);
-    if (Array.isArray(props.courses)) sources.push(...props.courses);
+    sources.push(...asArray(props.product?.courses));
+    sources.push(...asArray(props.courses));
     if (props.course) sources.push(props.course);
-    if (Array.isArray(props.advertisedProduct?.courses)) sources.push(...props.advertisedProduct.courses);
 
     return sources.filter(course => course?.chapters);
   }
@@ -310,9 +367,9 @@
   }
 
   // ─── Main orchestrator ───
-  function startCollection(options = {}) {
+  async function startCollection(options = {}) {
     const onlyWeeks = Boolean(options.onlyWeeks);
-    const pageData = getPageData();
+    const pageData = await getPageDataWithDeferred(['courses']);
     if (!pageData) { alert('No page data found'); return; }
 
     const weekResults = collectWeekWorkouts(pageData);
@@ -397,18 +454,18 @@
   document.addEventListener('keydown', (event) => {
     event.getHelp();
 
-    event.executeAltEvent("C", "Collect all Kinescope video URLs", function () {
+    event.executeAltEvent("C", "Collect all Kinescope video URLs", async function () {
       try {
-        startCollection();
+        await startCollection();
       } catch (err) {
         console.error(err);
         alert('Failed: ' + err.message);
       }
     });
 
-    event.executeAltEvent("X", "Collect only week workouts", function () {
+    event.executeAltEvent("X", "Collect only week workouts", async function () {
       try {
-        startCollection({ onlyWeeks: true });
+        await startCollection({ onlyWeeks: true });
       } catch (err) {
         console.error(err);
         alert('Failed: ' + err.message);
