@@ -4,6 +4,8 @@
 // @namespace http://tampermonkey.net/
 // @version 2026-03-04v3
 // @match https://lk.popovichfit.ru/products/*
+// @downloadURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
+// @updateURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
 // @require https://jolly-newton-babd42.netlify.app/UsefulScripts.js
 // @grant none
 // ==/UserScript==
@@ -271,9 +273,9 @@
   // ─── Finish: build final object & show ───
   function finishCollection(allResults) {
     const data = {
-      trainings: allResults.filter(r => r.week),        // has week → Тренировки
-      extras: allResults.filter(r => !r.week && !r.subfolder && r.folder),  // folder only → Доп direct
-      subfolders: allResults.filter(r => r.subfolder)    // has subfolder → Доп sub-pages
+      trainings: allResults.filter(r => r.week),
+      extras: allResults.filter(r => !r.week && !r.subfolder && r.folder),
+      subfolders: allResults.filter(r => r.subfolder)
     };
 
     const readableText = formatReadableText(data);
@@ -287,11 +289,17 @@
   }
 
   // ─── Main orchestrator ───
-  function startCollection() {
+  function startCollection(options = {}) {
+    const onlyWeeks = Boolean(options.onlyWeeks);
     const pageData = getPageData();
     if (!pageData) { alert('No page data found'); return; }
 
     const weekResults = collectWeekWorkouts(pageData);
+    if (onlyWeeks) {
+      finishCollection(weekResults);
+      return;
+    }
+
     const folderResults = collectFolderWorkouts(pageData);
     const subFolderUrls = getSubFolderUrls(pageData);
 
@@ -371,6 +379,15 @@
     event.executeAltEvent("C", "Collect all Kinescope video URLs", function () {
       try {
         startCollection();
+      } catch (err) {
+        console.error(err);
+        alert('Failed: ' + err.message);
+      }
+    });
+
+    event.executeAltEvent("X", "Collect only week workouts", function () {
+      try {
+        startCollection({ onlyWeeks: true });
       } catch (err) {
         console.error(err);
         alert('Failed: ' + err.message);
