@@ -2,7 +2,7 @@
 // @name Popovich - collect kinescope iframe src
 // @description Collects Kinescope video URLs from PopovichFit course pages (Alt+C / Alt+X)
 // @namespace http://tampermonkey.net/
-// @version 2026-08-17v2
+// @version 2026-08-17v3
 // @match https://lk.popovichfit.ru/products/*
 // @downloadURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
 // @updateURL https://raw.githubusercontent.com/eugenefacecontrol/PopovichVideos/refs/heads/main/popovich-collect-kinescope-iframe-src.user.js
@@ -119,7 +119,6 @@
     for (const course of courses) {
       const sectionNames = course.section_names || [];
       const chapters = course.chapters || [];
-      const courseName = courses.length > 1 ? course.name : null;
 
       for (let w = 0; w < chapters.length; w++) {
         const weekName = sectionNames[w] || course.modules?.[w]?.name || `Week ${w + 1}`;
@@ -128,7 +127,6 @@
         for (const day of days) {
           for (const workout of (day.workouts || [])) {
             results.push({
-              course: courseName,
               week: weekName,
               weekday: day.weekday,
               date: day.date,
@@ -138,7 +136,6 @@
               type: workout.type,
               time: workout.time,
               iframeSrc: workout.media_url || null,
-              videoUrl: workout.video_url || null,
               media_type: workout.media_type,
               tags: workout.tags,
               inventory: workout.inventory,
