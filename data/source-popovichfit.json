@@ -4008,6 +4008,105 @@
       ],
       "inventory": "массажный мяч, Мяч для пилатеса, Лента для пилатеса, Йога-блок",
       "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Пн",
+      "date": "21",
+      "month": "Сентября",
+      "dayOrder": 16,
+      "title": "Внутренняя поверхность бедер",
+      "type": "Коррекция",
+      "time": 24,
+      "iframeSrc": "https://kinescope.io/embed/bMaAiVGhhqDhGjaoWKLdKp",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "МТД",
+        "Таз",
+        "Бедра",
+        "Ягодицы",
+        "КОР",
+        "Мобильность"
+      ],
+      "inventory": "массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Вт",
+      "date": "22",
+      "month": "Сентября",
+      "dayOrder": 17,
+      "title": "Стопы, колени, таз",
+      "type": "Коррекция",
+      "time": 27,
+      "iframeSrc": "https://kinescope.io/embed/030b89ed-8753-4ce5-8aba-4b0001afa582",
+      "media_type": "video",
+      "tags": [
+        "Стопа"
+      ],
+      "inventory": "Роллер для МФР, носок, Кубик для йоги/книга",
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Ср",
+      "date": "23",
+      "month": "Сентября",
+      "dayOrder": 18,
+      "title": "Осанка, лопатки",
+      "type": "Коррекция",
+      "time": 35,
+      "iframeSrc": "https://kinescope.io/embed/ce82fe0a-85a8-452f-979c-c845bcee595d",
+      "media_type": "video",
+      "tags": [],
+      "inventory": "2 массажных мяча, Лента для пилатеса",
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Чт",
+      "date": "24",
+      "month": "Сентября",
+      "dayOrder": 19,
+      "title": "Ягодицы, бедра, проблемные зоны",
+      "type": "Коррекция",
+      "time": 30,
+      "iframeSrc": "https://kinescope.io/embed/3ff0cab7-396a-4713-b2dd-b70cf7ad2335",
+      "media_type": "video",
+      "tags": [
+        "Ягодицы"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "4 неделя",
+      "weekday": "Пт",
+      "date": "25",
+      "month": "Сентября",
+      "dayOrder": 20,
+      "title": "Лимфодренаж всего тела",
+      "type": "Коррекция",
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/embed/fRE26CLe9gH2qXkpyzNgma",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "МТД",
+        "Таз",
+        "Бедра",
+        "Ягодицы",
+        "Осанка",
+        "КОР",
+        "Стопа",
+        "Мобильность",
+        "Колени",
+        "Коврик на полу"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
     }
   ],
   "extras": [
