@@ -4107,6 +4107,105 @@
       ],
       "inventory": "2 массажных мяча",
       "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пн",
+      "date": "5",
+      "month": "Октября",
+      "dayOrder": 1,
+      "title": "Дыхание",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/embed/2aeb6ec9-2d31-49b8-b994-6d7729ef2d1a",
+      "media_type": "video",
+      "tags": [
+        "Дыхание"
+      ],
+      "inventory": "Массажный мяч, Пилатес лента, Пилатес мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Вт",
+      "date": "6",
+      "month": "Октября",
+      "dayOrder": 2,
+      "title": "Мобильность: всё тело",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/embed/f4cf2c4e-fd1a-4dd6-9b76-a39e9395451c",
+      "media_type": "video",
+      "tags": [
+        "Осанка",
+        "Шея",
+        "Спина",
+        "КОР",
+        "Мобильность",
+        "Отеки"
+      ],
+      "inventory": "Массажный мяч, МФР ролл",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Ср",
+      "date": "7",
+      "month": "Октября",
+      "dayOrder": 3,
+      "title": "Таз, бедра, крестец и поясница",
+      "type": "Коррекция",
+      "time": 26,
+      "iframeSrc": "https://kinescope.io/embed/b43a35ac-b179-44f3-a969-c12061f5f45c",
+      "media_type": "video",
+      "tags": [
+        "Таз",
+        "Поясница"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Чт",
+      "date": "8",
+      "month": "Октября",
+      "dayOrder": 4,
+      "title": "Осанка, выравнивание тела",
+      "type": "Коррекция",
+      "time": 30,
+      "iframeSrc": "https://kinescope.io/embed/5f62bf55-f5a0-4461-805d-fb049efdd5ae",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "1 неделя",
+      "weekday": "Пт",
+      "date": "9",
+      "month": "Октября",
+      "dayOrder": 5,
+      "title": "Расслабление таза и поясницы",
+      "type": "Коррекция",
+      "time": 41,
+      "iframeSrc": "https://kinescope.io/embed/sweKLAUCsyxUmQhZSo3Pru",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "МТД",
+        "Таз",
+        "Бедра",
+        "Ягодицы",
+        "Осанка",
+        "КОР",
+        "Мобильность",
+        "Коврик на полу"
+      ],
+      "inventory": "2 массажных мяча",
+      "is_bonus": 0
     }
   ],
   "extras": [
