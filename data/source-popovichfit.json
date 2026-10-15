@@ -4206,6 +4206,109 @@
       ],
       "inventory": "2 массажных мяча",
       "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Пн",
+      "date": "12",
+      "month": "Октября",
+      "dayOrder": 6,
+      "title": "Живот и тазовое дно",
+      "type": "Коррекция",
+      "time": 31,
+      "iframeSrc": "https://kinescope.io/embed/gDHTy3Lf3L8jwaMzyuhhXd",
+      "media_type": "video",
+      "tags": [
+        "Живот"
+      ],
+      "inventory": "массажный мяч, Пилатес мяч, Пилатес лента",
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Вт",
+      "date": "13",
+      "month": "Октября",
+      "dayOrder": 7,
+      "title": "Бедра, таз, тазовое дно",
+      "type": "Коррекция",
+      "time": 38,
+      "iframeSrc": "https://kinescope.io/embed/aa254805-6a75-4966-b29f-48e24d229142",
+      "media_type": "video",
+      "tags": [
+        "Таз"
+      ],
+      "inventory": "массажный мяч, йога-блоки",
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Ср",
+      "date": "14",
+      "month": "Октября",
+      "dayOrder": 8,
+      "title": "Разворачиваем плечи",
+      "type": "Коррекция",
+      "time": 32,
+      "iframeSrc": "https://kinescope.io/embed/tkRqtPiwGpW4mT61iWytmJ",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "Шея",
+        "Осанка",
+        "Спина",
+        "КОР",
+        "Мобильность",
+        "Лицо",
+        "Коврик на полу"
+      ],
+      "inventory": null,
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Чт",
+      "date": "15",
+      "month": "Октября",
+      "dayOrder": 9,
+      "title": "Тазовое дно и внутренняя поверхность бедер",
+      "type": "Коррекция",
+      "time": 25,
+      "iframeSrc": "https://kinescope.io/embed/cd2e8308-e41d-459d-9c3e-5bafbd8058e5",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "МТД",
+        "Таз",
+        "Бедра",
+        "Ягодицы",
+        "Шея",
+        "Осанка",
+        "Пресс",
+        "КОР",
+        "Стопа",
+        "Мобильность",
+        "Коврик на полу"
+      ],
+      "inventory": "2 йога блока, пилатес мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "2 неделя",
+      "weekday": "Пт",
+      "date": "16",
+      "month": "Октября",
+      "dayOrder": 10,
+      "title": "Красивые руки и спина",
+      "type": "Коррекция",
+      "time": 34,
+      "iframeSrc": "https://kinescope.io/embed/qqfWhBazwvWJCNDeeqiPUW",
+      "media_type": "video",
+      "tags": [
+        "Осанка"
+      ],
+      "inventory": "массажный мяч, пилатес лента",
+      "is_bonus": 0
     }
   ],
   "extras": [
