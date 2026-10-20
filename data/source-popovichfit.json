@@ -4309,6 +4309,102 @@
       ],
       "inventory": "массажный мяч, пилатес лента",
       "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Пн",
+      "date": "19",
+      "month": "Октября",
+      "dayOrder": 11,
+      "title": "Положение таза и бедренных костей",
+      "type": "Коррекция",
+      "time": 38,
+      "iframeSrc": "https://kinescope.io/embed/viGbGqvTETMqEDJAnbvYgW",
+      "media_type": "video",
+      "tags": [
+        "Таз",
+        "Бедра"
+      ],
+      "inventory": "Массажный мяч",
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Вт",
+      "date": "20",
+      "month": "Октября",
+      "dayOrder": 12,
+      "title": "Лимфодренаж тела",
+      "type": "Коррекция",
+      "time": 37,
+      "iframeSrc": "https://kinescope.io/embed/4e88c0ea-2c30-41ec-b662-590de1966b9f",
+      "media_type": "video",
+      "tags": [
+        "Лимфодренаж"
+      ],
+      "inventory": "массажный мяч, роллер для мфр, Лента-эспандер",
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Ср",
+      "date": "21",
+      "month": "Октября",
+      "dayOrder": 13,
+      "title": "Пресс",
+      "type": "Коррекция",
+      "time": 28,
+      "iframeSrc": "https://kinescope.io/embed/0cf7f830-c97c-4230-850f-07e778449e70",
+      "media_type": "video",
+      "tags": [
+        "Пресс"
+      ],
+      "inventory": "пилатес мяч, полотенце",
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Чт",
+      "date": "22",
+      "month": "Октября",
+      "dayOrder": 14,
+      "title": "Осанка",
+      "type": "Коррекция",
+      "time": 33,
+      "iframeSrc": "https://kinescope.io/embed/b12920a1-34ba-4ee3-8531-c4c894597214",
+      "media_type": "video",
+      "tags": [
+        "Осанка",
+        "Отеки",
+        "Шея",
+        "Спина",
+        "Пресс",
+        "КОР",
+        "Мобильность",
+        "Дыхание",
+        "Лопатки",
+        "Коврик на полу"
+      ],
+      "inventory": "пилатес лента, 2 массажных мяча",
+      "is_bonus": 0
+    },
+    {
+      "week": "3 неделя",
+      "weekday": "Пт",
+      "date": "23",
+      "month": "Октября",
+      "dayOrder": 15,
+      "title": "Бока, валики под мышками",
+      "type": "Коррекция",
+      "time": 35,
+      "iframeSrc": "https://kinescope.io/embed/3xVJsQqNWiRbwseH4AC1Ec",
+      "media_type": "video",
+      "tags": [
+        "Отеки",
+        "Коврик на полу"
+      ],
+      "inventory": "массажный мяч, Мяч для пилатеса, Лента для пилатеса, Йога-блок",
+      "is_bonus": 0
     }
   ],
   "extras": [
